@@ -1,0 +1,20 @@
+{
+  "name": "kuka-project",
+  "version": "1.0.0",
+  "description": "KUKA Specialty Coffee Landing Page",
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./assets/css/styles.css --minify",
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.10",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "motion": "^13.1.1"
+  }
+}
