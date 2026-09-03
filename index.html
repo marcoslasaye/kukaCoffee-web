@@ -308,37 +308,6 @@
                 }
             };
         }, { amount: 0.2 });
-
-        // 2. All other Sections (Blur Reveal + Stagger with Replay)
-        const sections = document.querySelectorAll("section:not(#experience)");
-        sections.forEach((section) => {
-            inView(section, () => {
-                const animTargets = section.querySelectorAll("h2, p, .grid > div, ul > li, .border-l-2, img");
-                const targets = animTargets.length > 0 ? Array.from(animTargets) : [section];
-
-                targets.forEach((target, index) => {
-                    animate(target, 
-                        { 
-                            opacity: [0, 1], 
-                            y: [28, 0],
-                            filter: ["blur(8px)", "blur(0px)"]
-                        }, 
-                        { 
-                            duration: 0.8, 
-                            delay: Math.min(index * 0.07, 0.45), 
-                            easing: [0.22, 1, 0.36, 1] 
-                        }
-                    );
-                });
-
-                // Reset upon exit to allow replay on re-entry
-                return () => {
-                    targets.forEach((target) => {
-                        animate(target, { opacity: 0, y: 20, filter: "blur(6px)" }, { duration: 0.2 });
-                    });
-                };
-            }, { amount: 0.15 });
-        });
     }
 </script>
 </body></html>
