@@ -268,46 +268,35 @@
         }
     });
 
-    // Motion animations (Vanilla JS)
+    // Motion animations (Vanilla JS - Only Hero Section on page load)
     if (window.Motion) {
-        const { animate, inView } = window.Motion;
+        const { animate } = window.Motion;
 
-        // Hero Section Animation (In-View with increased delay & stagger)
-        inView("#experience", () => {
-            const heroBg = document.querySelector("#experience .hero-bg-img");
-            if (heroBg) {
-                animate(heroBg, 
-                    { scale: [1.14, 1.02] }, 
-                    { duration: 4.5, delay: 0.2, easing: [0.16, 1, 0.3, 1] }
-                );
-            }
+        // 1. Ken Burns background subtle zoom (runs once on load)
+        const heroBg = document.querySelector("#experience .hero-bg-img");
+        if (heroBg) {
+            animate(heroBg, 
+                { scale: [1.14, 1.02] }, 
+                { duration: 5.0, delay: 0.3, easing: [0.16, 1, 0.3, 1] }
+            );
+        }
 
-            const heroElements = document.querySelectorAll("#experience .hero-elem");
-            heroElements.forEach((el, index) => {
-                animate(el, 
-                    { 
-                        opacity: [0, 1], 
-                        y: [24, 0],
-                        filter: ["blur(10px)", "blur(0px)"]
-                    }, 
-                    { 
-                        duration: 1.1, 
-                        delay: 0.35 + (index * 0.22), 
-                        easing: [0.22, 1, 0.36, 1] 
-                    }
-                );
-            });
-
-            // Reset upon exit to allow replay on re-entry
-            return () => {
-                heroElements.forEach((el) => {
-                    animate(el, { opacity: 0, y: 20, filter: "blur(8px)" }, { duration: 0.2 });
-                });
-                if (heroBg) {
-                    animate(heroBg, { scale: 1.14 }, { duration: 0.2 });
+        // 2. Editorial Blur + Stagger entrance (runs once on load with higher delay)
+        const heroElements = document.querySelectorAll("#experience .hero-elem");
+        heroElements.forEach((el, index) => {
+            animate(el, 
+                { 
+                    opacity: [0, 1], 
+                    y: [24, 0],
+                    filter: ["blur(10px)", "blur(0px)"]
+                }, 
+                { 
+                    duration: 1.2, 
+                    delay: 0.45 + (index * 0.25), 
+                    easing: [0.22, 1, 0.36, 1] 
                 }
-            };
-        }, { amount: 0.2 });
+            );
+        });
     }
 </script>
 </body></html>
