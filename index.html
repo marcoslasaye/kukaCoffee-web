@@ -268,34 +268,76 @@
         }
     });
 
-    // Motion animations (Vanilla JS - Only Hero Section on page load)
+    // Motion animations (Vanilla JS)
     if (window.Motion) {
-        const { animate } = window.Motion;
+        const { animate, inView } = window.Motion;
 
-        // 1. Ken Burns background subtle zoom (runs once on load)
-        const heroBg = document.querySelector("#experience .hero-bg-img");
-        if (heroBg) {
-            animate(heroBg, 
-                { scale: [1.14, 1.02] }, 
-                { duration: 5.0, delay: 0.3, easing: [0.16, 1, 0.3, 1] }
-            );
-        }
+        // 1. Hero Section (In-View with Replay)
+        inView("#experience", () => {
+            const heroBg = document.querySelector("#experience .hero-bg-img");
+            if (heroBg) {
+                animate(heroBg, 
+                    { scale: [1.14, 1.02] }, 
+                    { duration: 4.0, easing: [0.16, 1, 0.3, 1] }
+                );
+            }
 
-        // 2. Editorial Blur + Stagger entrance (runs once on load with higher delay)
-        const heroElements = document.querySelectorAll("#experience .hero-elem");
-        heroElements.forEach((el, index) => {
-            animate(el, 
-                { 
-                    opacity: [0, 1], 
-                    y: [24, 0],
-                    filter: ["blur(10px)", "blur(0px)"]
-                }, 
-                { 
-                    duration: 1.2, 
-                    delay: 0.45 + (index * 0.25), 
-                    easing: [0.22, 1, 0.36, 1] 
+            const heroElements = document.querySelectorAll("#experience .hero-elem");
+            heroElements.forEach((el, index) => {
+                animate(el, 
+                    { 
+                        opacity: [0, 1], 
+                        y: [24, 0],
+                        filter: ["blur(10px)", "blur(0px)"]
+                    }, 
+                    { 
+                        duration: 0.9, 
+                        delay: 0.1 + (index * 0.12), 
+                        easing: [0.22, 1, 0.36, 1] 
+                    }
+                );
+            });
+
+            // Reset upon exit to allow replay on re-entry
+            return () => {
+                heroElements.forEach((el) => {
+                    animate(el, { opacity: 0, y: 20, filter: "blur(8px)" }, { duration: 0.2 });
+                });
+                if (heroBg) {
+                    animate(heroBg, { scale: 1.14 }, { duration: 0.2 });
                 }
-            );
+            };
+        }, { amount: 0.2 });
+
+        // 2. All other Sections (Blur Reveal + Stagger with Replay)
+        const sections = document.querySelectorAll("section:not(#experience)");
+        sections.forEach((section) => {
+            inView(section, () => {
+                const animTargets = section.querySelectorAll("h2, p, .grid > div, ul > li, .border-l-2, img");
+                const targets = animTargets.length > 0 ? Array.from(animTargets) : [section];
+
+                targets.forEach((target, index) => {
+                    animate(target, 
+                        { 
+                            opacity: [0, 1], 
+                            y: [28, 0],
+                            filter: ["blur(8px)", "blur(0px)"]
+                        }, 
+                        { 
+                            duration: 0.8, 
+                            delay: Math.min(index * 0.07, 0.45), 
+                            easing: [0.22, 1, 0.36, 1] 
+                        }
+                    );
+                });
+
+                // Reset upon exit to allow replay on re-entry
+                return () => {
+                    targets.forEach((target) => {
+                        animate(target, { opacity: 0, y: 20, filter: "blur(6px)" }, { duration: 0.2 });
+                    });
+                };
+            }, { amount: 0.15 });
         });
     }
 </script>
