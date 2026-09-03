@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "KUKA Specialty Coffee Landing Page",
   "scripts": {
-    "build": "npm run build:css",
+    "build": "npx tailwindcss -i ./src/input.css -o ./assets/css/styles.css --minify",
     "build:css": "npx tailwindcss -i ./src/input.css -o ./assets/css/styles.css --minify",
     "watch:css": "npx tailwindcss -i ./src/input.css -o ./assets/css/styles.css --watch"
   },
