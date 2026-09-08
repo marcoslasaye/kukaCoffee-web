@@ -5,6 +5,23 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>KUKA Coffee | Specialty Coffee &amp; Workspace in Tegallalang, Bali</title>
 <meta content="Artisanal specialty coffee &amp; tranquil workspace overlooking rice terraces in Tegallalang, Bali. Single-origin Arabica, 5G WiFi &amp; serene design." name="description"/>
+<link rel="canonical" href="https://kukacoffee.com/"/>
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://kukacoffee.com/"/>
+<meta property="og:title" content="KUKA Coffee | Specialty Coffee &amp; Workspace in Tegallalang, Bali"/>
+<meta property="og:description" content="Artisanal specialty coffee &amp; tranquil workspace overlooking rice terraces in Tegallalang, Bali. Single-origin Arabica, 5G WiFi &amp; serene design."/>
+<meta property="og:image" content="https://kukacoffee.com/assets/images/view-2.webp"/>
+<meta property="og:locale" content="en_US"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://kukacoffee.com/"/>
+<meta name="twitter:title" content="KUKA Coffee | Specialty Coffee &amp; Workspace in Tegallalang, Bali"/>
+<meta name="twitter:description" content="Artisanal specialty coffee &amp; tranquil workspace overlooking rice terraces in Tegallalang, Bali. Single-origin Arabica, 5G WiFi &amp; serene design."/>
+<meta name="twitter:image" content="https://kukacoffee.com/assets/images/view-2.webp"/>
+
 <link rel="icon" type="image/webp" href="./assets/images/logo.webp"/>
 <link rel="apple-touch-icon" href="./assets/images/logo.webp"/>
 
@@ -23,61 +40,87 @@
 
 <link href="./assets/css/styles.css" rel="stylesheet"/>
 
-<!-- Schema.org JSON-LD for Local SEO & Rich Results -->
+<!-- Schema.org JSON-LD for Local SEO & FAQ Rich Results -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CafeOrCoffeeShop",
-  "name": "KUKA Specialty Coffee",
-  "image": "https://kukacoffee.com/assets/images/entrance-1.webp",
-  "url": "https://kukacoffee.com",
-  "telephone": "",
-  "priceRange": "$$",
-  "servesCuisine": "Specialty Coffee, Artisanal Bakery",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Jl. Raya Tegallalang",
-    "addressLocality": "Gianyar",
-    "addressRegion": "Bali",
-    "postalCode": "80561",
-    "addressCountry": "ID"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -8.4344,
-    "longitude": 115.2787
-  },
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
+      "@type": "CafeOrCoffeeShop",
+      "@id": "https://kukacoffee.com/#cafe",
+      "name": "KUKA Specialty Coffee",
+      "image": "https://kukacoffee.com/assets/images/entrance-1.webp",
+      "url": "https://kukacoffee.com",
+      "priceRange": "$$",
+      "servesCuisine": ["Specialty Coffee", "Pour Over V60", "Artisanal Bakery"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raya Tegallalang",
+        "addressLocality": "Gianyar",
+        "addressRegion": "Bali",
+        "postalCode": "80561",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.4344,
+        "longitude": 115.2787
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        }
       ],
-      "opens": "07:00",
-      "closes": "18:00"
-    }
-  ],
-  "amenityFeature": [
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "High-Speed 5G WiFi",
-      "value": true
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "High-Speed 5G WiFi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Dedicated Digital Nomad Workspace & Power Outlets",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Rice Terrace Scenic View",
+          "value": true
+        }
+      ]
     },
     {
-      "@type": "LocationFeatureSpecification",
-      "name": "Power Outlets at Tables",
-      "value": true
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      "name": "Rice Terrace View",
-      "value": true
+      "@type": "FAQPage",
+      "@id": "https://kukacoffee.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is KUKA Specialty Coffee located in Bali?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KUKA is located on Jl. Raya Tegallalang, Gianyar, Bali, just minutes north of Ubud overlooking serene rice field terraces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is KUKA suitable for digital nomads and remote work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, KUKA features ultra-fast 5G WiFi, abundant power outlets at every seating area, ergonomic teak chairs, and a tranquil open-air pavilion designed for deep focus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of coffee beans does KUKA serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KUKA serves 100% Arabica single-origin beans sourced directly from the highlands of Munduk and Kintamani at 1,350m altitude, extracted with espresso and precision manual pour-overs (V60)."
+          }
+        }
+      ]
     }
   ]
 }
