@@ -1,12 +1,12 @@
-﻿# KUKA Specialty Coffee
+# KUKA Specialty Coffee
 
-> Artisanal coffee sanctuary and high-speed digital nomad workspace overlooking rice terraces in Tegallalang, Bali.
+> Specialty single-origin coffee on the main road of Tegallalang, Bali. Easy access, direct parking, and tranquil open-air pavilion.
 
 ## Core Information
-- **Type**: Specialty Coffee Shop & Coworking Space
-- **Location**: Jl. Raya Tegallalang, Gianyar, Bali 80561, Indonesia (minutes from Tegallalang Rice Terraces, north of Ubud)
+- **Type**: Specialty Coffee Shop & Open-Air Cafe
+- **Location**: Jl. Raya Tegallalang, Gianyar, Bali 80561, Indonesia (main road access with parking, nearby ATM and Indomaret, away from tourist crowds)
 - **Hours**: Everyday, 7:00 AM – 6:00 PM
-- **Coffee**: 100% Arabica Single-Origin from Munduk & Kintamani (1,350m MASL, Washed Process, V60 / Espresso)
-- **Work Amenities**: High-speed 5G WiFi, power outlets at all seating areas, ergonomic teak chairs, tranquil ambient acoustics
-- **Aesthetic**: Traditional Balinese craftsmanship, hand-carved limestone, polished teak wood open-air pavilion
+- **Coffee**: 100% Arabica Single-Origin from Munduk & Kintamani (1,350m MASL, freshly roasted, extracted with professional espresso machines)
+- **Amenities**: Easy car & motorbike parking, 5G WiFi, power outlets, tranquil open valley atmosphere
+- **Aesthetic**: Traditional Balinese craftsmanship, hand-carved volcanic limestone, solid teak wood
 - **Website**: https://kukacoffee.id/
