@@ -15,6 +15,16 @@
       "permanent": true
     },
     {
+      "source": "/services/private-events-pavilion.html",
+      "destination": "/services/small-group-bookings.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/private-events-pavilion",
+      "destination": "/services/small-group-bookings",
+      "permanent": true
+    },
+    {
       "source": "/services/digital-nomad-workspace.html",
       "destination": "/#location-access",
       "permanent": true
