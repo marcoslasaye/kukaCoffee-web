@@ -16,7 +16,7 @@
     },
     {
       "source": "/services/private-events-pavilion.html",
-      "destination": "/services/small-group-bookings.html",
+      "destination": "/services/small-group-bookings",
       "permanent": true
     },
     {
