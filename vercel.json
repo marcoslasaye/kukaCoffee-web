@@ -1,4 +1,16 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/services/digital-nomad-workspace.html",
+      "destination": "/#location-access",
+      "permanent": true
+    },
+    {
+      "source": "/services/digital-nomad-workspace",
+      "destination": "/#location-access",
+      "permanent": true
+    }
+  ]
 }
