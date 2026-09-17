@@ -33,6 +33,16 @@
       "source": "/services/digital-nomad-workspace",
       "destination": "/#location-access",
       "permanent": true
+    },
+    {
+      "source": "/services/specialty-coffee-tasting.html",
+      "destination": "/services/coffee-and-bites",
+      "permanent": true
+    },
+    {
+      "source": "/services/specialty-coffee-tasting",
+      "destination": "/services/coffee-and-bites",
+      "permanent": true
     }
   ]
 }
