@@ -1,9 +1,9 @@
-# KUKA Specialty Coffee
+# KUKA Coffee Shop
 
-> Specialty single-origin coffee on the main road of Tegallalang, Bali. Easy access, direct parking, and tranquil open-air pavilion.
+> Open-air coffee shop and tranquil workspace on the main road of Tegallalang, Bali. Easy access, direct parking, and locally roasted Bali coffee.
 
 ## Core Information
-- **Type**: Specialty Coffee Shop & Open-Air Cafe
+- **Type**: Coffee Shop & Open-Air Cafe Workspace
 - **Location**: Jl. Raya Tegallalang, Gianyar, Bali 80561, Indonesia (main road access with parking, nearby ATM and Indomaret, away from tourist crowds)
 - **Hours**: Everyday, 7:00 AM – 6:00 PM
 - **Coffee**: 100% Arabica Single-Origin from Munduk & Kintamani (1,350m MASL, freshly roasted, extracted with professional espresso machines)
