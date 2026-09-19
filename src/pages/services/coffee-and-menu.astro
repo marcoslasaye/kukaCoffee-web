@@ -182,32 +182,10 @@ const schema = {
   <section class="pt-6 pb-16 px-4 md:px-12 bg-surface-container relative" id="menu">
     <div class="max-w-6xl mx-auto">
 
-      <!-- Sticky Category Navigation: Mobile Single Button Bar / Desktop Tabs -->
-      <nav aria-label="Menu Categories" class="sticky top-[69px] z-40 bg-surface-container/95 backdrop-blur-md py-2.5 -mx-4 px-4 md:mx-0 md:px-0 mb-8 border-b border-outline-variant/30 transition-all shadow-sm">
-        <!-- Mobile Single-Bar Category Trigger (< md) -->
-        <div class="md:hidden flex items-center justify-between gap-3">
-          <div class="flex items-center gap-2 min-w-0">
-            <span id="mobile-current-icon" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-primary/10 text-primary shrink-0">
-              <span class="material-symbols-outlined text-base">local_cafe</span>
-            </span>
-            <div class="min-w-0">
-              <span id="mobile-current-title" class="block text-xs font-bold text-primary truncate">Coffee Menu</span>
-            </div>
-          </div>
-          <button 
-            type="button" 
-            id="mobile-category-sheet-open"
-            class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-label-lg text-xs uppercase font-bold tracking-wider px-3.5 py-1.5 rounded-full shadow-sm active:scale-95 transition-all touch-manipulation cursor-pointer shrink-0 border border-primary/20"
-            aria-haspopup="dialog"
-            aria-expanded="false"
-          >
-            <span class="material-symbols-outlined text-sm">menu</span>
-            <span>Categories</span>
-          </button>
-        </div>
-
+      <!-- Sticky Category Navigation: Desktop Tabs Only -->
+      <nav aria-label="Menu Categories" class="hidden md:block sticky top-[69px] z-40 bg-surface-container/95 backdrop-blur-md py-2.5 mb-8 border-b border-outline-variant/30 transition-all shadow-sm">
         <!-- Desktop Horizontal Tabs (>= md) -->
-        <div class="hidden md:flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1" id="menu-cluster-tabs" role="tablist">
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1" id="menu-cluster-tabs" role="tablist">
           <a class="menu-tab-btn active inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 bg-primary text-on-primary shadow-sm" href="#cluster-coffee" role="tab">
             <span class="material-symbols-outlined text-base">local_cafe</span>
             <span>Coffee</span>
@@ -236,14 +214,26 @@ const schema = {
         
         <!-- Cluster: Coffee -->
         <div class="menu-cluster scroll-mt-40 md:scroll-mt-48" id="cluster-coffee">
-          <div class="flex items-center justify-between border-b border-outline-variant/40 pb-3 mb-6">
+          <div class="flex items-center justify-between border-b border-outline-variant/40 pb-3 mb-6 gap-2">
             <div class="flex items-center gap-2.5">
               <span class="w-8 h-8 rounded bg-primary/10 text-primary flex items-center justify-center">
                 <span class="material-symbols-outlined text-xl">local_cafe</span>
               </span>
               <h3 class="text-xl md:text-2xl font-bold text-primary font-headline-sm">Coffee</h3>
             </div>
-            <span class="text-xs text-on-surface-variant font-medium hidden sm:inline-block">100% Bali Arabica • Munduk &amp; Kintamani</span>
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-on-surface-variant font-medium hidden sm:inline-block">100% Bali Arabica • Munduk &amp; Kintamani</span>
+              <button 
+                type="button" 
+                id="mobile-category-sheet-open"
+                class="md:hidden inline-flex items-center gap-1.5 bg-primary text-on-primary font-label-lg text-xs uppercase font-bold tracking-wider px-3.5 py-1.5 rounded-full shadow-sm active:scale-95 transition-all touch-manipulation cursor-pointer shrink-0 border border-primary/20"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+              >
+                <span class="material-symbols-outlined text-sm">menu</span>
+                <span>Menu Categories</span>
+              </button>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -772,8 +762,6 @@ const schema = {
     const openBtn = document.getElementById('mobile-category-sheet-open');
     const closeBtn = document.getElementById('category-drawer-close');
     const drawerLinks = document.querySelectorAll('.drawer-cat-link');
-    const mobileCurrentTitle = document.getElementById('mobile-current-title');
-    const mobileCurrentIcon = document.getElementById('mobile-current-icon');
 
     function openDrawer() {
       if (!drawer || !drawerSheet) return;
@@ -807,11 +795,6 @@ const schema = {
         e.preventDefault();
         const targetId = link.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        const catName = link.getAttribute('data-category');
-        const catIcon = link.getAttribute('data-icon');
-
-        if (mobileCurrentTitle) mobileCurrentTitle.textContent = `${catName} Menu`;
-        if (mobileCurrentIcon) mobileCurrentIcon.innerHTML = `<span class="material-symbols-outlined text-base">${catIcon}</span>`;
 
         closeDrawer();
 
@@ -824,14 +807,6 @@ const schema = {
       });
     });
 
-    const catMap = {
-      'cluster-coffee': { name: 'Coffee', icon: 'local_cafe' },
-      'cluster-non-coffee': { name: 'Non Coffee', icon: 'local_bar' },
-      'cluster-matcha': { name: 'Matcha', icon: 'emoji_food_beverage' },
-      'cluster-smoothie': { name: 'Smoothie', icon: 'blender' },
-      'cluster-bakery': { name: 'Bakery', icon: 'bakery_dining' }
-    };
-
     // IntersectionObserver for active tab highlight
     const observerOptions = {
       root: null,
@@ -843,12 +818,6 @@ const schema = {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const activeId = entry.target.id;
-
-          // Sync mobile current label display
-          if (catMap[activeId]) {
-            if (mobileCurrentTitle) mobileCurrentTitle.textContent = `${catMap[activeId].name} Menu`;
-            if (mobileCurrentIcon) mobileCurrentIcon.innerHTML = `<span class="material-symbols-outlined text-base">${catMap[activeId].icon}</span>`;
-          }
 
           tabs.forEach(tab => {
             const isMatch = tab.getAttribute('href') === `#${activeId}`;
