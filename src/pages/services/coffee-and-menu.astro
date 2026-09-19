@@ -182,9 +182,84 @@ const schema = {
   <section class="pt-6 pb-16 px-4 md:px-12 bg-surface-container relative" id="menu">
     <div class="max-w-6xl mx-auto">
 
-      <!-- Sticky Category Tabs Navigation (Cluster Navigation) -->
-      <nav aria-label="Menu Categories" class="sticky top-[69px] z-40 bg-surface-container/95 backdrop-blur-md py-3 -mx-4 px-4 md:mx-0 md:px-0 mb-10 border-b border-outline-variant/30 transition-all shadow-sm">
-        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1" id="menu-cluster-tabs" role="tablist">
+      <!-- Sticky Category Navigation: Mobile Expandable Card / Desktop Tabs -->
+      <nav aria-label="Menu Categories" class="sticky top-[69px] z-40 bg-surface-container/95 backdrop-blur-md py-2.5 -mx-4 px-4 md:mx-0 md:px-0 mb-8 border-b border-outline-variant/30 transition-all shadow-sm">
+        <!-- Mobile Category Expandable Card (< md) -->
+        <div class="md:hidden">
+          <button 
+            type="button" 
+            id="mobile-menu-toggle"
+            class="w-full flex items-center justify-between p-3 rounded-xl bg-surface-bright border border-amber-400/50 hover:border-amber-400 shadow-2xs text-primary font-bold active:scale-[0.98] transition-all touch-manipulation cursor-pointer"
+            aria-expanded="false"
+            aria-controls="mobile-menu-dropdown"
+          >
+            <div class="flex items-center gap-2.5">
+              <span id="mobile-menu-active-icon" class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-on-primary shadow-xs">
+                <span class="material-symbols-outlined text-base">local_cafe</span>
+              </span>
+              <div class="text-left">
+                <div class="flex items-center gap-2">
+                  <span id="mobile-menu-active-title" class="text-sm font-extrabold text-primary">Coffee</span>
+                  <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">Category</span>
+                </div>
+                <span class="block text-[11px] font-normal text-on-surface-variant">Tap to jump to category</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-1.5 text-primary">
+              <span class="text-[11px] font-semibold text-primary/80">Menu</span>
+              <span id="mobile-menu-chevron" class="material-symbols-outlined text-xl transition-transform duration-300">expand_more</span>
+            </div>
+          </button>
+
+          <!-- Mobile Dropdown List -->
+          <div 
+            id="mobile-menu-dropdown" 
+            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out"
+          >
+            <div class="overflow-hidden">
+              <div class="pt-2 pb-1 space-y-1.5">
+                <a href="#cluster-coffee" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Coffee" data-icon="local_cafe">
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-base text-primary">local_cafe</span>
+                    <span>Coffee (Single-Origin Espresso &amp; Lattes)</span>
+                  </div>
+                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+                </a>
+                <a href="#cluster-non-coffee" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Non Coffee" data-icon="local_bar">
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-base text-primary">local_bar</span>
+                    <span>Non Coffee &amp; Artisan Teas</span>
+                  </div>
+                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+                </a>
+                <a href="#cluster-matcha" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Matcha" data-icon="emoji_food_beverage">
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-base text-primary">emoji_food_beverage</span>
+                    <span>Matcha (Japanese Ceremonial Grade)</span>
+                  </div>
+                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+                </a>
+                <a href="#cluster-smoothie" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Smoothie" data-icon="blender">
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-base text-primary">blender</span>
+                    <span>Smoothies &amp; Tropical Bowls</span>
+                  </div>
+                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+                </a>
+                <a href="#cluster-bakery" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Bakery" data-icon="bakery_dining">
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-base text-primary">bakery_dining</span>
+                    <span>Artisan Bakery &amp; Croissants</span>
+                  </div>
+                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop Horizontal Tabs (>= md) -->
+        <div class="hidden md:flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1" id="menu-cluster-tabs" role="tablist">
           <a class="menu-tab-btn active inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 bg-primary text-on-primary shadow-sm" href="#cluster-coffee" role="tab">
             <span class="material-symbols-outlined text-base">local_cafe</span>
             <span>Coffee</span>
@@ -651,6 +726,66 @@ const schema = {
       });
     });
 
+    // Mobile category selector dropdown
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const mobileDropdown = document.getElementById('mobile-menu-dropdown');
+    const mobileChevron = document.getElementById('mobile-menu-chevron');
+    const activeIcon = document.getElementById('mobile-menu-active-icon');
+    const activeTitle = document.getElementById('mobile-menu-active-title');
+    const mobileItems = document.querySelectorAll('.mobile-cat-item');
+
+    function closeMobileMenu() {
+      if (!mobileToggle || !mobileDropdown) return;
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      mobileDropdown.classList.remove('grid-rows-[1fr]');
+      mobileDropdown.classList.add('grid-rows-[0fr]');
+      if (mobileChevron) mobileChevron.classList.remove('rotate-180');
+    }
+
+    if (mobileToggle && mobileDropdown) {
+      mobileToggle.addEventListener('click', () => {
+        const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', String(!isOpen));
+        if (isOpen) {
+          mobileDropdown.classList.remove('grid-rows-[1fr]');
+          mobileDropdown.classList.add('grid-rows-[0fr]');
+          if (mobileChevron) mobileChevron.classList.remove('rotate-180');
+        } else {
+          mobileDropdown.classList.remove('grid-rows-[0fr]');
+          mobileDropdown.classList.add('grid-rows-[1fr]');
+          if (mobileChevron) mobileChevron.classList.add('rotate-180');
+        }
+      });
+    }
+
+    mobileItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = item.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const catName = item.getAttribute('data-category');
+        const catIcon = item.getAttribute('data-icon');
+
+        if (activeTitle) activeTitle.textContent = catName;
+        if (activeIcon) activeIcon.innerHTML = `<span class="material-symbols-outlined text-base">${catIcon}</span>`;
+
+        closeMobileMenu();
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          history.replaceState(null, null, `#${targetId}`);
+        }
+      });
+    });
+
+    const catMap = {
+      'cluster-coffee': { name: 'Coffee', icon: 'local_cafe' },
+      'cluster-non-coffee': { name: 'Non Coffee', icon: 'local_bar' },
+      'cluster-matcha': { name: 'Matcha', icon: 'emoji_food_beverage' },
+      'cluster-smoothie': { name: 'Smoothie', icon: 'blender' },
+      'cluster-bakery': { name: 'Bakery', icon: 'bakery_dining' }
+    };
+
     // IntersectionObserver for active tab highlight
     const observerOptions = {
       root: null,
@@ -662,6 +797,13 @@ const schema = {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const activeId = entry.target.id;
+
+          // Sync mobile dropdown display
+          if (catMap[activeId]) {
+            if (activeTitle) activeTitle.textContent = catMap[activeId].name;
+            if (activeIcon) activeIcon.innerHTML = `<span class="material-symbols-outlined text-base">${catMap[activeId].icon}</span>`;
+          }
+
           tabs.forEach(tab => {
             const isMatch = tab.getAttribute('href') === `#${activeId}`;
             if (isMatch) {
