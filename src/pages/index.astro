@@ -151,10 +151,10 @@ const schema = {
 >
   <main>
     <!-- Hero Bento Section -->
-<section class="relative w-full min-h-[85vh] md:min-h-screen flex items-center justify-center pt-24 pb-12 md:py-24 px-margin-mobile md:px-margin-desktop overflow-hidden bg-background" id="experience">
-  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 items-stretch">
-    <!-- Bento Main Media (65% width / 8 cols): Landscape Rice Terrace View with H1 -->
-    <div class="lg:col-span-8 relative rounded-2xl overflow-hidden min-h-[460px] md:min-h-[580px] flex flex-col justify-end p-6 md:p-10 shadow-[0_12px_40px_rgba(74,44,42,0.12)] border border-outline-variant/30 group">
+<section class="relative w-full flex items-center justify-center pt-[5.5rem] md:pt-[5.5rem] pb-6 md:pb-8 px-margin-mobile md:px-margin-desktop overflow-hidden bg-background" id="experience">
+  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-3.5 md:gap-4 items-stretch">
+    <!-- Bento Main Media (approx 60% width / 7 cols): Landscape Rice Terrace View with H1 -->
+    <div class="lg:col-span-7 relative rounded-2xl overflow-hidden min-h-[360px] md:min-h-[400px] lg:min-h-[420px] flex flex-col justify-end p-5 md:p-6 shadow-[0_12px_40px_rgba(74,44,42,0.12)] border border-outline-variant/30 group">
       <div class="absolute inset-0 z-0 overflow-hidden">
         <picture>
           <source media="(max-width: 768px)" srcset="/assets/images/view-2-mobile.webp" type="image/webp"/>
@@ -163,62 +163,62 @@ const schema = {
         </picture>
         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 z-10"></div>
       </div>
-      <div class="relative z-20 text-left max-w-2xl">
-        <span class="hero-elem inline-block bg-secondary-container/90 text-secondary font-label-sm text-xs uppercase px-3.5 py-1.5 rounded-full mb-4 backdrop-blur-sm tracking-widest border border-secondary/20 shadow-sm">Tegallalang, Bali</span>
-        <h1 class="hero-elem font-display-lg-mobile md:font-display-lg text-2xl md:text-4xl lg:text-[44px] text-on-primary leading-tight mb-3 text-shadow-subtle">
+      <div class="relative z-20 text-left max-w-xl">
+        <span class="hero-elem inline-block bg-secondary-container/90 text-secondary font-label-sm text-xs uppercase px-3 py-0.5 rounded-full mb-2.5 backdrop-blur-sm tracking-widest border border-secondary/20 shadow-sm">Tegallalang, Bali</span>
+        <h1 class="hero-elem font-display-lg-mobile md:font-display-lg text-2xl md:text-3xl lg:text-[34px] text-on-primary leading-tight mb-2 text-shadow-subtle">
           Coffee Shop &amp; Quiet Workspace in Tegallalang
         </h1>
-        <p class="hero-elem font-body-md text-sm md:text-base text-on-primary/90 mb-6 text-shadow-subtle font-light">
-          Locally roasted Bali single-origin coffee, 5G WiFi, and a tranquil rice terrace view — 15 minutes north of Ubud with easy direct parking.
+        <p class="hero-elem font-body-md text-xs md:text-sm text-on-primary/90 mb-4 text-shadow-subtle font-light leading-relaxed">
+          Locally roasted Bali single-origin coffee, 70+ Mbps 5G WiFi, and a tranquil rice terrace view — 15 minutes north of Ubud with easy direct parking.
         </p>
-        <a class="hero-elem inline-flex items-center gap-2 bg-surface text-primary font-label-lg text-xs uppercase px-6 py-3 rounded hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-lg active:scale-95" href="#location-access">
+        <a class="hero-elem inline-flex items-center gap-2 bg-surface text-primary font-label-lg text-xs uppercase px-4 py-2 rounded hover:bg-surface-container transition-all duration-300 shadow-md hover:shadow-lg active:scale-95" href="#location-access">
           <span>Explore Atmosphere</span>
           <span class="material-symbols-outlined text-sm">arrow_downward</span>
         </a>
       </div>
     </div>
 
-    <!-- Bento Sidebar Clusters (35% width / 4 cols): 2 stacked feature cards -->
-    <div class="lg:col-span-4 flex flex-col gap-4 md:gap-6 justify-between">
+    <!-- Bento Sidebar Clusters (approx 40% width / 5 cols): 2 stacked feature cards -->
+    <div class="lg:col-span-5 flex flex-col gap-3.5 justify-between">
       <!-- Cluster 1: Coffee & Menu -->
-      <a class="group relative flex-1 bg-surface-container rounded-2xl p-6 md:p-8 border border-outline-variant/40 hover:border-primary/40 shadow-[0_4px_20px_rgba(74,44,42,0.04)] hover:shadow-[0_12px_32px_rgba(74,44,42,0.12)] transition-all duration-300 flex flex-col justify-between" href="/services/coffee-and-bites">
+      <a class="hero-elem group relative flex-1 bg-surface-container rounded-2xl p-4 md:p-5 border border-outline-variant/40 hover:border-primary/40 shadow-[0_4px_20px_rgba(74,44,42,0.04)] hover:shadow-[0_12px_32px_rgba(74,44,42,0.12)] transition-all duration-300 flex flex-col justify-between" href="/services/coffee-and-bites">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-primary-container/10 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-              <span class="material-symbols-outlined text-2xl">local_cafe</span>
+          <div class="flex items-center justify-between mb-2.5">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-primary-container/10 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+              <span class="material-symbols-outlined text-lg">local_cafe</span>
             </span>
-            <span class="text-xs font-semibold uppercase tracking-wider text-secondary bg-secondary-container/80 px-2.5 py-1 rounded-full">Menu &amp; Bakery</span>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-secondary bg-secondary-container/80 px-2.5 py-0.5 rounded-full">Menu &amp; Bakery</span>
           </div>
-          <h2 class="font-headline-sm text-xl md:text-2xl text-primary mb-2 group-hover:text-primary-container transition-colors">
+          <h2 class="font-headline-sm text-base md:text-lg text-primary mb-1 group-hover:text-primary-container transition-colors">
             Coffee &amp; Menu
           </h2>
-          <p class="font-body-md text-xs md:text-sm text-on-surface-variant leading-relaxed">
+          <p class="font-body-md text-xs text-on-surface-variant leading-relaxed line-clamp-2">
             100% Bali Arabica from Munduk &amp; Kintamani, fresh bakery croissants, and artisan snacks crafted daily.
           </p>
         </div>
-        <div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center text-xs font-bold uppercase tracking-wider text-primary group-hover:translate-x-1 transition-transform">
+        <div class="mt-3 pt-2.5 border-t border-outline-variant/30 flex items-center text-xs font-bold uppercase tracking-wider text-primary group-hover:translate-x-1 transition-transform">
           <span>View Full Menu</span>
           <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
         </div>
       </a>
 
       <!-- Cluster 2: Group Bookings -->
-      <a class="group relative flex-1 bg-surface-container rounded-2xl p-6 md:p-8 border border-outline-variant/40 hover:border-primary/40 shadow-[0_4px_20px_rgba(74,44,42,0.04)] hover:shadow-[0_12px_32px_rgba(74,44,42,0.12)] transition-all duration-300 flex flex-col justify-between" href="/services/small-group-bookings">
+      <a class="hero-elem group relative flex-1 bg-surface-container rounded-2xl p-4 md:p-5 border border-outline-variant/40 hover:border-primary/40 shadow-[0_4px_20px_rgba(74,44,42,0.04)] hover:shadow-[0_12px_32px_rgba(74,44,42,0.12)] transition-all duration-300 flex flex-col justify-between" href="/services/small-group-bookings">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
-              <span class="material-symbols-outlined text-2xl">groups</span>
+          <div class="flex items-center justify-between mb-2.5">
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-lg">groups</span>
             </span>
-            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant bg-surface-container-highest px-2.5 py-1 rounded-full">Workspaces &amp; Events</span>
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-on-surface-variant bg-surface-container-highest px-2.5 py-0.5 rounded-full">Workspaces &amp; Events</span>
           </div>
-          <h2 class="font-headline-sm text-xl md:text-2xl text-primary mb-2 group-hover:text-primary-container transition-colors">
+          <h2 class="font-headline-sm text-base md:text-lg text-primary mb-1 group-hover:text-primary-container transition-colors">
             Group Bookings
           </h2>
-          <p class="font-body-md text-xs md:text-sm text-on-surface-variant leading-relaxed">
+          <p class="font-body-md text-xs text-on-surface-variant leading-relaxed line-clamp-2">
             Reserved seating, power outlets, and high-speed fiber WiFi for digital nomad teams, workshops, and gatherings.
           </p>
         </div>
-        <div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center text-xs font-bold uppercase tracking-wider text-secondary group-hover:translate-x-1 transition-transform">
+        <div class="mt-3 pt-2.5 border-t border-outline-variant/30 flex items-center text-xs font-bold uppercase tracking-wider text-secondary group-hover:translate-x-1 transition-transform">
           <span>Explore Bookings</span>
           <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
         </div>
@@ -227,10 +227,10 @@ const schema = {
   </div>
 </section>
 <!-- Strategic Location & Easy Access Section -->
-<section class="min-h-screen lg:h-screen lg:max-h-[920px] flex flex-col justify-center px-margin-mobile md:px-margin-desktop bg-surface-container relative overflow-hidden pt-24 md:pt-28 pb-8 scroll-mt-0" id="location-access">
+<section class="py-10 md:py-14 px-margin-mobile md:px-margin-desktop bg-surface-container relative overflow-hidden scroll-mt-6 md:scroll-mt-8" id="location-access">
 <!-- Abstract ambient background -->
 <div class="absolute -right-64 -top-64 w-[800px] h-[800px] bg-surface-dim rounded-full blur-3xl opacity-50 z-0 pointer-events-none"></div>
-<div class="max-w-7xl mx-auto w-full relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-between my-auto">
+<div class="max-w-7xl mx-auto w-full relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-between">
 <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-[0_12px_40px_rgba(74,44,42,0.12)] border border-outline-variant/20 h-[280px] md:h-[360px] lg:h-[420px]">
 <img alt="KUKA open-air cafe space on main road Tegallalang" class="w-full h-full object-cover" data-alt="Convenient open-air specialty cafe located on the main road of Tegallalang, Bali with accessible parking and tropical garden surroundings." src="/assets/images/customers-1.webp" loading="lazy" decoding="async"/>
 </div>
@@ -296,28 +296,28 @@ const schema = {
 </div>
 </section>
 <!-- Guest Reviews (Social Proof / Google Reviews) Section -->
-<section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-y border-outline-variant/30 scroll-mt-16" id="reviews">
+<section class="py-10 md:py-14 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-y border-outline-variant/30 scroll-mt-16" id="reviews">
   <div class="max-w-6xl mx-auto w-full">
-    <div class="mb-8">
-      <div class="inline-flex items-center gap-2 bg-secondary-container/80 text-secondary font-label-sm text-xs uppercase px-3 py-1 rounded-full mb-3 tracking-widest border border-secondary/20 shadow-sm">
+    <div class="mb-6">
+      <div class="inline-flex items-center gap-2 bg-secondary-container/80 text-secondary font-label-sm text-xs uppercase px-3 py-1 rounded-full mb-2 tracking-widest border border-secondary/20 shadow-sm">
         <span class="flex text-[#FBBC04] text-xs">
           ★ ★ ★ ★ ★
         </span>
         <span class="font-bold">5.0 on Google Maps</span>
       </div>
-      <h2 class="font-headline-md text-2xl md:text-3xl lg:text-4xl text-primary leading-tight">
+      <h2 class="font-headline-md text-2xl md:text-3xl text-primary leading-tight">
         Loved by Locals &amp; Travelers
       </h2>
-      <p class="font-body-md text-xs md:text-sm text-on-surface-variant mt-1.5 max-w-xl leading-relaxed">
+      <p class="font-body-md text-xs md:text-sm text-on-surface-variant mt-1 max-w-xl leading-relaxed">
         Real experiences from guests who stopped by for fresh Bali coffee, warm croissants, and quiet focus overlooking the rice terraces.
       </p>
     </div>
 
     <!-- Interactive Review Callout Banner -->
-    <div class="mb-10 p-6 md:p-8 rounded-2xl bg-surface-bright border border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_4px_20px_rgba(74,44,42,0.04)]">
+    <div class="mb-8 p-5 md:p-6 rounded-2xl bg-surface-bright border border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_4px_20px_rgba(74,44,42,0.04)]">
       <div class="text-center sm:text-left">
-        <div class="flex items-center justify-center sm:justify-start gap-1.5 text-[#FBBC04] mb-1.5">
-          <span class="text-base font-bold">★ ★ ★ ★ ★</span>
+        <div class="flex items-center justify-center sm:justify-start gap-1.5 text-[#FBBC04] mb-1">
+          <span class="text-sm font-bold">★ ★ ★ ★ ★</span>
           <span class="text-xs font-bold text-primary uppercase tracking-wider ml-1">Been to KUKA recently?</span>
         </div>
         <p class="font-body-md text-xs md:text-sm text-on-surface-variant max-w-lg leading-relaxed">
@@ -329,22 +329,22 @@ const schema = {
           <span>View on Maps</span>
           <span class="material-symbols-outlined text-sm">open_in_new</span>
         </a>
-        <a class="animate-review-pulse inline-flex items-center gap-2 bg-[#FBBC04] hover:bg-[#F59E0B] text-[#241312] font-label-md text-xs md:text-sm font-extrabold uppercase px-6 py-3.5 rounded-full transition-all shrink-0 active:scale-95" href="https://g.page/r/CSMo4HXT-vkIEAE/review" target="_blank" rel="noopener noreferrer">
-          <span class="material-symbols-outlined text-xl">rate_review</span>
+        <a class="animate-review-pulse inline-flex items-center gap-2 bg-[#FBBC04] hover:bg-[#F59E0B] text-[#241312] font-label-md text-xs font-extrabold uppercase px-5 py-2.5 rounded-full transition-all shrink-0 active:scale-95" href="https://g.page/r/CSMo4HXT-vkIEAE/review" target="_blank" rel="noopener noreferrer">
+          <span class="material-symbols-outlined text-lg">rate_review</span>
           <span>Leave Your Review</span>
         </a>
       </div>
     </div>
 
     <!-- Review Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
       
       <!-- Card 1: Kiko Setyawan -->
-      <article class="bg-surface-bright p-6 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all">
+      <article class="bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center border border-primary/20">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center border border-primary/20">
                 K
               </div>
               <div>
@@ -354,14 +354,14 @@ const schema = {
             </div>
             <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
           </div>
-          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3">
+          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-2.5">
             “Tempatnya nyaman, adem dan bersih. Kopinya enak dan pelayanannya juga ramah, next time akan mampir lagi jika liburan ke Bali.”
           </p>
-          <p class="font-body-md text-[11px] text-on-surface-variant italic border-l-2 border-primary/30 pl-2.5 mb-4">
+          <p class="font-body-md text-[11px] text-on-surface-variant italic border-l-2 border-primary/30 pl-2.5 mb-3">
             “Comfortable, breezy, and clean. Delicious coffee and friendly service — will definitely visit again on my next trip to Bali.”
           </p>
         </div>
-        <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
+        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
           <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-primary">Food 5 • Service 5 • Vibe 5</span>
           <a href="https://www.google.com/maps/contrib/112133252968755205562/reviews?hl=es" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
             Verified Review <span class="material-symbols-outlined text-[12px]">open_in_new</span>
@@ -370,11 +370,11 @@ const schema = {
       </article>
 
       <!-- Card 2: Sophie -->
-      <article class="bg-surface-bright p-6 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all">
+      <article class="bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary font-bold text-sm flex items-center justify-center border border-secondary/20">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-full bg-secondary/10 text-secondary font-bold text-sm flex items-center justify-center border border-secondary/20">
                 S
               </div>
               <div>
@@ -385,11 +385,11 @@ const schema = {
             <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
           </div>
           <span class="inline-block text-[11px] uppercase tracking-wider font-bold text-secondary mb-1">Hidden Gem</span>
-          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-4">
+          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3">
             “Lovely place with views over garden and rice fields, koi-pond (you can feed them) and the best coffee and warm croissants in town! LOVE it! Beautiful atmosphere and lovely owner.”
           </p>
         </div>
-        <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
+        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
           <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-secondary">Best Coffee &amp; Croissants</span>
           <a href="https://www.google.com/maps/contrib/101600870751385328140/reviews?hl=es" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
             Verified Review <span class="material-symbols-outlined text-[12px]">open_in_new</span>
@@ -398,11 +398,11 @@ const schema = {
       </article>
 
       <!-- Card 3: Nikita M. -->
-      <article class="bg-surface-bright p-6 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all">
+      <article class="bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-primary-container/20 text-primary font-bold text-sm flex items-center justify-center border border-primary/20">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-full bg-primary-container/20 text-primary font-bold text-sm flex items-center justify-center border border-primary/20">
                 N
               </div>
               <div>
@@ -412,14 +412,14 @@ const schema = {
             </div>
             <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
           </div>
-          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3">
+          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-2.5">
             “Очень классное место, нам очень понравилось. Здесь красиво, уютно и делают очень вкусный кофе. Всё выглядит профессионально и с душой...”
           </p>
-          <p class="font-body-md text-[11px] text-on-surface-variant italic border-l-2 border-primary/30 pl-2.5 mb-4">
+          <p class="font-body-md text-[11px] text-on-surface-variant italic border-l-2 border-primary/30 pl-2.5 mb-3">
             “Awesome place! Beautiful, cozy, and they make delicious coffee with soul. Special thanks for the warm welcome!”
           </p>
         </div>
-        <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
+        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
           <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-primary">Quiet Vibe • No Wait</span>
           <a href="https://www.google.com/maps/contrib/100387763419723096193/reviews?hl=es" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
             Verified Review <span class="material-symbols-outlined text-[12px]">open_in_new</span>
@@ -431,37 +431,37 @@ const schema = {
   </div>
 </section>
 <!-- Location & Contact Section -->
-<section class="min-h-screen lg:h-screen lg:max-h-[920px] flex flex-col justify-center px-margin-mobile md:px-margin-desktop bg-surface pt-24 md:pt-28 pb-8 scroll-mt-0" id="location">
-<div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row bg-surface-bright rounded-2xl overflow-hidden border border-outline-variant/40 shadow-[0_8px_30px_rgba(74,44,42,0.05)] my-auto min-h-[360px] md:min-h-[420px]">
-<div class="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-between">
+<section class="py-10 md:py-14 px-margin-mobile md:px-margin-desktop bg-surface scroll-mt-16" id="location">
+<div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row bg-surface-bright rounded-2xl overflow-hidden border border-outline-variant/40 shadow-[0_8px_30px_rgba(74,44,42,0.05)] min-h-[320px] md:min-h-[380px]">
+<div class="w-full md:w-1/2 p-5 md:p-8 flex flex-col justify-between">
 <div>
-<h2 class="font-headline-md text-2xl md:text-3xl text-primary mb-1.5 leading-tight">Find Your Peace</h2>
-<p class="font-body-md text-xs md:text-sm text-on-surface-variant mb-6">Located just north of Ubud, KUKA is highly regarded as the best coffee in Tegallalang.</p>
-<div class="space-y-4">
-<div class="flex items-start gap-3.5">
-<span class="material-symbols-outlined text-primary-container mt-0.5 text-xl">location_on</span>
+<h2 class="font-headline-md text-2xl md:text-3xl text-primary mb-1 leading-tight">Visit Us</h2>
+<p class="font-body-md text-xs md:text-sm text-on-surface-variant mb-4">Located just north of Ubud, KUKA is highly regarded as the best coffee in Tegallalang.</p>
+<div class="space-y-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container mt-0.5 text-lg">location_on</span>
 <div>
 <h4 class="font-label-lg text-sm font-semibold text-on-surface">Address</h4>
-<p class="font-body-md text-xs md:text-sm text-on-surface-variant mt-0.5">Jl. Raya Tegallalang<br/>Gianyar, Bali 80561<br/>Indonesia</p>
+<p class="font-body-md text-xs text-on-surface-variant mt-0.5">Jl. Raya Tegallalang, Gianyar, Bali 80561, Indonesia</p>
 </div>
 </div>
-<div class="flex items-start gap-3.5">
-<span class="material-symbols-outlined text-primary-container mt-0.5 text-xl">schedule</span>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container mt-0.5 text-lg">schedule</span>
 <div>
 <h4 class="font-label-lg text-sm font-semibold text-on-surface">Hours</h4>
-<p class="font-body-md text-xs md:text-sm text-on-surface-variant mt-0.5">Everyday: 7:00 AM - 6:00 PM</p>
+<p class="font-body-md text-xs text-on-surface-variant mt-0.5">Everyday: 7:00 AM - 6:00 PM</p>
 </div>
 </div>
-<div class="flex items-start gap-3.5">
-<span class="material-symbols-outlined text-primary-container mt-0.5 text-xl">wifi</span>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container mt-0.5 text-lg">wifi</span>
 <div>
 <h4 class="font-label-lg text-sm font-semibold text-on-surface">Tested 5G WiFi &amp; Work Desks</h4>
-<p class="font-body-md text-xs md:text-sm text-on-surface-variant mt-0.5">100+ Mbps verified connection • Dedicated power outlets at each table • Cash, Cards &amp; QRIS</p>
+<p class="font-body-md text-xs text-on-surface-variant mt-0.5">70+ Mbps verified connection • Dedicated power outlets at each table • Cash, Cards &amp; QRIS</p>
 </div>
 </div>
 </div>
 </div>
-<div class="mt-6 flex flex-wrap gap-3">
+<div class="mt-5 flex flex-wrap gap-2.5">
 <a class="inline-flex items-center justify-center bg-primary-container text-on-primary font-label-lg text-xs md:text-sm uppercase px-5 py-2.5 rounded hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg active:translate-y-0.5" href="https://maps.app.goo.gl/bTXu4n2Jy6TDUX776" target="_blank" rel="noopener noreferrer">
     Get Directions
 </a>
@@ -510,10 +510,6 @@ const schema = {
       if (window.Motion) {
         const { animate, inView } = window.Motion;
         inView('#experience', () => {
-          const heroBg = document.querySelector('#experience .hero-bg-img');
-          if (heroBg) {
-            animate(heroBg, { scale: [1.14, 1.02] }, { duration: 4.0, easing: [0.16, 1, 0.3, 1] });
-          }
           const heroElements = document.querySelectorAll('#experience .hero-elem');
           heroElements.forEach((el, index) => {
             animate(el, { opacity: [0, 1], y: [24, 0], filter: ['blur(10px)', 'blur(0px)'] }, { duration: 0.9, delay: 0.1 + (index * 0.12), easing: [0.22, 1, 0.36, 1] });
@@ -522,9 +518,6 @@ const schema = {
             heroElements.forEach((el) => {
               animate(el, { opacity: 0, y: 20, filter: 'blur(8px)' }, { duration: 0.2 });
             });
-            if (heroBg) {
-              animate(heroBg, { scale: 1.14 }, { duration: 0.2 });
-            }
           };
         }, { amount: 0.2 });
       }

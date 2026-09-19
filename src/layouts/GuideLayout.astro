@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from './BaseLayout.astro';
 
 interface Props {
@@ -30,7 +30,19 @@ const {
   schema={schema}
   currentPath={currentPath}
 >
-  <main class="max-w-3xl mx-auto px-4 md:px-6 py-12">
+  <main class="max-w-3xl mx-auto px-4 md:px-6 py-12 pt-28">
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="mb-6 flex items-center gap-1.5 text-xs text-on-surface-variant font-medium">
+      <a href="/" class="hover:text-primary transition-colors flex items-center gap-1">
+        <span class="material-symbols-outlined text-sm">home</span>
+        <span>Home</span>
+      </a>
+      <span>/</span>
+      <span class="text-on-surface-variant/70">Guides</span>
+      <span>/</span>
+      <span class="text-primary font-semibold truncate max-w-[200px] sm:max-w-xs">{title}</span>
+    </nav>
+
     <!-- Article Header -->
     <header class="mb-10">
       <div class="flex items-center gap-2 text-xs text-on-surface-variant mb-4">

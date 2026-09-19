@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const guides = [
+  {
+    title: "Best Cafes to Work Near Ubud (Quiet & Fast WiFi)",
+    description: "Looking for quiet work cafes near Ubud without crowded tourist buses? A curated guide to scenic, productive spots with 70+ Mbps WiFi, power outlets, and peaceful rice field views.",
+    url: "/guides/best-cafes-to-work-near-ubud",
+    badge: "Digital Nomad Guide",
+    readTime: "6 min read",
+    image: "/assets/images/view-2.webp"
+  },
+  {
+    title: "Withdrawing Cash in Indonesia with Foreign Cards: ATM Fees & Safe Tips",
+    description: "Complete guide to withdrawing IDR cash in Bali and Indonesia. Best bank ATMs (BCA, Mandiri, BNI), avoiding dynamic currency conversion (DCC), and daily withdrawal limits.",
+    url: "/guides/withdrawing-cash-indonesia-atm-foreign-card",
+    badge: "Bali Travel Guide",
+    readTime: "5 min read",
+    image: "/assets/images/customers-1.webp"
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://kukacoffee.id/guides#webpage",
+      "url": "https://kukacoffee.id/guides",
+      "name": "KUKA Bali Guides & Remote Work Insights",
+      "description": "Guides for digital nomads, coffee lovers, and travelers visiting Tegallalang and Ubud, Bali.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://kukacoffee.id"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://kukacoffee.id/guides"
+          }
+        ]
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Bali Guides & Remote Work Insights | KUKA Coffee Tegallalang"
+  description="Explore curated Bali guides on quiet workspaces, fast WiFi cafes, travel tips, and specialty coffee in Tegallalang & Ubud."
+  canonical="https://kukacoffee.id/guides"
+  schema={schema}
+  currentPath="/guides"
+>
+  <main class="py-16 md:py-24 px-4 md:px-12 max-w-6xl mx-auto pt-28">
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="mb-8 flex items-center gap-1.5 text-xs text-on-surface-variant font-medium">
+      <a href="/" class="hover:text-primary transition-colors flex items-center gap-1">
+        <span class="material-symbols-outlined text-sm">home</span>
+        <span>Home</span>
+      </a>
+      <span>/</span>
+      <span class="text-primary font-semibold">Guides</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="max-w-2xl mb-12">
+      <span class="bg-secondary-container text-secondary text-xs uppercase font-bold px-3.5 py-1.5 rounded-full tracking-widest inline-block mb-3 border border-secondary/20">
+        KUKA Editorial Hub
+      </span>
+      <h1 class="text-3xl md:text-5xl font-bold text-primary font-headline-sm leading-tight mb-4">
+        Bali Guides &amp; Workspace Insights
+      </h1>
+      <p class="text-sm md:text-base text-on-surface-variant leading-relaxed">
+        Curated local guides for remote workers, travelers, and coffee explorers in Tegallalang and Ubud. Learn where to work, how to navigate Bali, and discover peaceful hidden gems.
+      </p>
+    </header>
+
+    <!-- Guides Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      {guides.map((guide) => (
+        <article class="bg-surface-bright rounded-2xl overflow-hidden border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.04)] hover:shadow-[0_12px_32px_rgba(74,44,42,0.12)] hover:border-primary/40 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-56 overflow-hidden relative">
+              <img
+                src={guide.image}
+                alt={guide.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute top-4 left-4">
+                <span class="bg-background/90 backdrop-blur-sm text-secondary font-bold text-xs uppercase px-3 py-1 rounded-full shadow-sm">
+                  {guide.badge}
+                </span>
+              </div>
+            </div>
+            <div class="p-6 md:p-8">
+              <span class="text-xs text-on-surface-variant/80 font-semibold mb-2 block">
+                {guide.readTime}
+              </span>
+              <h2 class="text-xl md:text-2xl font-bold text-primary font-headline-sm mb-3 group-hover:text-primary-container transition-colors">
+                <a href={guide.url}>
+                  {guide.title}
+                </a>
+              </h2>
+              <p class="text-xs md:text-sm text-on-surface-variant leading-relaxed line-clamp-3">
+                {guide.description}
+              </p>
+            </div>
+          </div>
+          <div class="p-6 md:p-8 pt-0">
+            <a
+              href={guide.url}
+              class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary group-hover:translate-x-1 transition-transform"
+            >
+              <span>Read Full Guide</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Conversion & Link Juice Back to Home Banner -->
+    <aside class="p-8 md:p-10 rounded-2xl bg-surface-container border border-outline-variant/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_4px_20px_rgba(74,44,42,0.04)]">
+      <div class="text-center md:text-left max-w-xl">
+        <h3 class="text-xl md:text-2xl font-bold text-primary font-headline-sm mb-2">
+          Visiting Tegallalang or Ubud?
+        </h3>
+        <p class="text-xs md:text-sm text-on-surface-variant leading-relaxed">
+          Stop by KUKA Coffee for 100% Bali single-origin Arabica, warm croissants, fast 5G WiFi, and peaceful rice terrace views away from tourist crowds.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3 shrink-0">
+        <a href="/" class="bg-primary text-on-primary font-bold text-xs uppercase px-6 py-3 rounded shadow-md hover:bg-primary-container transition-all active:scale-95">
+          Explore KUKA Home
+        </a>
+        <a href="/services/coffee-and-bites" class="bg-surface border border-outline-variant/60 text-primary font-bold text-xs uppercase px-6 py-3 rounded hover:bg-surface-container-high transition-all active:scale-95">
+          View Menu
+        </a>
+      </div>
+    </aside>
+  </main>
+</BaseLayout>
