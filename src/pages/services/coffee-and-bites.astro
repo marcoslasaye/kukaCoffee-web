@@ -87,6 +87,29 @@ const schema = {
           }
         }
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kukacoffee.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://kukacoffee.id/#experience"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Coffee & Bites",
+          "item": "https://kukacoffee.id/services/coffee-and-bites"
+        }
+      ]
     }
   ]
 };
@@ -103,6 +126,18 @@ const schema = {
     <!-- Hero Section -->
   <header class="py-16 md:py-24 px-4 md:px-12 bg-surface-container-low border-b border-outline-variant/30">
     <div class="max-w-5xl mx-auto text-center">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="mb-6 flex items-center justify-center gap-1.5 text-xs text-on-surface-variant font-medium">
+        <a href="/" class="hover:text-primary transition-colors flex items-center gap-1">
+          <span class="material-symbols-outlined text-sm">home</span>
+          <span>Home</span>
+        </a>
+        <span>/</span>
+        <a href="/#experience" class="hover:text-primary transition-colors">Services</a>
+        <span>/</span>
+        <span class="text-primary font-semibold">Coffee &amp; Bites</span>
+      </nav>
+
       <span class="bg-secondary-container text-secondary text-xs uppercase font-bold px-3 py-1 rounded-full tracking-widest inline-block mb-6 md:mb-8">
         Coffee Shop &amp; Bakery • Tegallalang, Bali
       </span>
