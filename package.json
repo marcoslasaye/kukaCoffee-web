@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
-    "@astrojs/tailwind": "^6.0.2",
     "astro": "^7.3.3",
     "motion": "^13.1.1"
   }
