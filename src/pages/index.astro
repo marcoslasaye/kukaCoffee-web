@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BorderBeam from '../components/BorderBeam.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -246,9 +247,10 @@ const schema = {
 
     <!-- Bento Sidebar Clusters (50% width / 1 col): 2 stacked feature cards with clear separation -->
     <div class="flex flex-col gap-6 lg:gap-7 justify-between">
-      <!-- Cluster 1: Coffee & Menu (Warm Coffee Tint + Amber Border) -->
-      <a class="hero-elem group relative flex-1 bg-[#faebe5] hover:bg-[#f6e4dc] rounded-2xl p-4 md:p-5 border border-amber-400/60 hover:border-amber-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" href="/services/coffee-and-menu">
-        <div>
+      <!-- Cluster 1: Coffee & Menu (Warm Coffee Tint + Amber Border + Border Beam) -->
+      <a class="hero-elem group relative flex-1 bg-[#faebe5] hover:bg-[#f6e4dc] rounded-2xl p-4 md:p-5 border border-amber-400/50 hover:border-amber-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden" href="/services/coffee-and-menu">
+        <BorderBeam size={160} duration={6} colorFrom="#f59e0b" colorTo="#fbbf24" borderWidth={1.5} radius={16} />
+        <div class="relative z-10">
           <div class="flex items-center justify-between mb-2.5">
             <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-primary text-on-primary shadow-sm group-hover:scale-105 transition-transform">
               <span class="material-symbols-outlined text-lg">local_cafe</span>
@@ -262,7 +264,7 @@ const schema = {
             100% Bali Arabica (1,350m), espresso &amp; oat milk drinks, fresh croissants, and daily artisan bites.
           </p>
         </div>
-        <div class="mt-3.5 pt-2.5 border-t border-primary/15 flex items-center justify-between">
+        <div class="relative z-10 mt-3.5 pt-2.5 border-t border-primary/15 flex items-center justify-between">
           <span class="inline-flex items-center gap-1.5 bg-primary text-on-primary text-xs font-bold uppercase tracking-wider px-4 py-2 rounded shadow-sm group-hover:bg-primary-container transition-colors">
             <span>View Full Menu</span>
             <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -271,9 +273,10 @@ const schema = {
         </div>
       </a>
 
-      <!-- Cluster 2: Group Bookings (Botanical Green Tint + Amber Border) -->
-      <a class="hero-elem group relative flex-1 bg-[#edf5eb] hover:bg-[#e4efe2] rounded-2xl p-4 md:p-5 border border-amber-400/60 hover:border-amber-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" href="/services/small-group-bookings">
-        <div>
+      <!-- Cluster 2: Group Bookings (Botanical Green Tint + Amber Border + Border Beam) -->
+      <a class="hero-elem group relative flex-1 bg-[#edf5eb] hover:bg-[#e4efe2] rounded-2xl p-4 md:p-5 border border-amber-400/50 hover:border-amber-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden" href="/services/small-group-bookings">
+        <BorderBeam size={160} duration={6} delay={3} colorFrom="#f59e0b" colorTo="#fbbf24" borderWidth={1.5} radius={16} />
+        <div class="relative z-10">
           <div class="flex items-center justify-between mb-2.5">
             <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-secondary text-white shadow-sm group-hover:scale-105 transition-transform">
               <span class="material-symbols-outlined text-lg">groups</span>
@@ -287,7 +290,7 @@ const schema = {
             Reserved seating, power outlets, and 70+ Mbps WiFi for digital nomad teams, workshops, and gatherings.
           </p>
         </div>
-        <div class="mt-3.5 pt-2.5 border-t border-secondary/15 flex items-center justify-between">
+        <div class="relative z-10 mt-3.5 pt-2.5 border-t border-secondary/15 flex items-center justify-between">
           <span class="inline-flex items-center gap-1.5 bg-secondary text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded shadow-sm group-hover:bg-secondary/90 transition-colors">
             <span>Explore Bookings</span>
             <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>

@@ -1,0 +1,62 @@
+---
+interface Props {
+  size?: number;
+  duration?: number;
+  delay?: number;
+  colorFrom?: string;
+  colorTo?: string;
+  borderWidth?: number;
+  radius?: number;
+  reverse?: boolean;
+  className?: string;
+}
+
+const {
+  size = 140,
+  duration = 6,
+  delay = 0,
+  colorFrom = "#f59e0b",
+  colorTo = "#fbbf24",
+  borderWidth = 1.5,
+  radius = 16,
+  reverse = false,
+  className = "",
+} = Astro.props;
+---
+
+<div
+  class={`border-beam-container pointer-events-none absolute inset-0 rounded-[inherit] overflow-hidden ${className}`}
+  style={{
+    borderWidth: `${borderWidth}px`,
+    borderStyle: "solid",
+    borderColor: "transparent",
+    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+    WebkitMaskComposite: "xor",
+    mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+    maskComposite: "exclude",
+  }}
+>
+  <div
+    class="border-beam-ray absolute aspect-square will-change-[offset-distance]"
+    style={{
+      width: `${size}px`,
+      offsetPath: `rect(0 auto auto 0 round ${radius}px)`,
+      background: `linear-gradient(to ${reverse ? 'right' : 'left'}, ${colorFrom}, ${colorTo}, transparent)`,
+      animation: `border-beam-anim ${duration}s linear infinite`,
+      animationDelay: `-${delay}s`,
+      animationDirection: reverse ? 'reverse' : 'normal',
+    }}
+  >
+  </div>
+</div>
+
+<style>
+  @keyframes border-beam-anim {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+</style>
