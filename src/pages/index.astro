@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BorderBeam from '../components/BorderBeam.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -247,55 +246,65 @@ const schema = {
 
     <!-- Bento Sidebar Clusters (50% width / 1 col): 2 stacked feature cards with clear separation -->
     <div class="flex flex-col gap-6 lg:gap-7 justify-between">
-      <!-- Cluster 1: Coffee & Menu (Warm Coffee Tint + Amber Border + Border Beam) -->
-      <a class="hero-elem group relative flex-1 bg-[#faebe5] hover:bg-[#f6e4dc] rounded-2xl p-4 md:p-5 border border-amber-400/50 hover:border-amber-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden" href="/services/coffee-and-menu">
-        <BorderBeam size={160} duration={6} colorFrom="#f59e0b" colorTo="#fbbf24" borderWidth={1.5} radius={16} />
-        <div class="relative z-10">
-          <div class="flex items-center justify-between mb-2.5">
-            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-primary text-on-primary shadow-sm group-hover:scale-105 transition-transform">
-              <span class="material-symbols-outlined text-lg">local_cafe</span>
-            </span>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/15">Menu &amp; Bakery</span>
+      <!-- Cluster 1: Coffee & Menu (Warm Coffee Tint + Border Beam) -->
+      <a class="hero-elem group relative flex-1 rounded-2xl p-[1.5px] border border-amber-400/40 hover:border-amber-400 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden shadow-2xs" href="/services/coffee-and-menu">
+        <!-- Glowing Border Beam -->
+        <div class="border-beam-spinning"></div>
+        
+        <!-- Card Inner Surface -->
+        <div class="relative z-10 w-full h-full bg-[#faebe5] group-hover:bg-[#f6e4dc] rounded-[calc(1rem-1.5px)] p-4 md:p-5 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-primary text-on-primary shadow-sm group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-lg">local_cafe</span>
+              </span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/15">Menu &amp; Bakery</span>
+            </div>
+            <h2 class="font-headline-sm text-base md:text-lg font-bold text-primary mb-1 group-hover:text-primary-container transition-colors">
+              Coffee &amp; Menu
+            </h2>
+            <p class="font-body-md text-xs md:text-sm text-on-surface-variant leading-relaxed line-clamp-2">
+              100% Bali Arabica (1,350m), espresso &amp; oat milk drinks, fresh croissants, and daily artisan bites.
+            </p>
           </div>
-          <h2 class="font-headline-sm text-base md:text-lg font-bold text-primary mb-1 group-hover:text-primary-container transition-colors">
-            Coffee &amp; Menu
-          </h2>
-          <p class="font-body-md text-xs md:text-sm text-on-surface-variant leading-relaxed line-clamp-2">
-            100% Bali Arabica (1,350m), espresso &amp; oat milk drinks, fresh croissants, and daily artisan bites.
-          </p>
-        </div>
-        <div class="relative z-10 mt-3.5 pt-2.5 border-t border-primary/15 flex items-center justify-between">
-          <span class="inline-flex items-center gap-1.5 bg-primary text-on-primary text-xs font-bold uppercase tracking-wider px-4 py-2 rounded shadow-sm group-hover:bg-primary-container transition-colors">
-            <span>View Full Menu</span>
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </span>
-          <span class="text-[11px] font-semibold text-primary/70">Walk-ins welcome</span>
+          <div class="mt-3.5 pt-2.5 border-t border-primary/15 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 bg-primary text-on-primary text-xs font-bold uppercase tracking-wider px-4 py-2 rounded shadow-sm group-hover:bg-primary-container transition-colors">
+              <span>View Full Menu</span>
+              <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </span>
+            <span class="text-[11px] font-semibold text-primary/70">Walk-ins welcome</span>
+          </div>
         </div>
       </a>
 
-      <!-- Cluster 2: Group Bookings (Botanical Green Tint + Amber Border + Border Beam) -->
-      <a class="hero-elem group relative flex-1 bg-[#edf5eb] hover:bg-[#e4efe2] rounded-2xl p-4 md:p-5 border border-amber-400/50 hover:border-amber-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden" href="/services/small-group-bookings">
-        <BorderBeam size={160} duration={6} delay={3} colorFrom="#f59e0b" colorTo="#fbbf24" borderWidth={1.5} radius={16} />
-        <div class="relative z-10">
-          <div class="flex items-center justify-between mb-2.5">
-            <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-secondary text-white shadow-sm group-hover:scale-105 transition-transform">
-              <span class="material-symbols-outlined text-lg">groups</span>
-            </span>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-secondary bg-secondary/15 px-2.5 py-0.5 rounded-full border border-secondary/20">Workspaces &amp; Teams</span>
+      <!-- Cluster 2: Group Bookings (Botanical Green Tint + Border Beam) -->
+      <a class="hero-elem group relative flex-1 rounded-2xl p-[1.5px] border border-amber-400/40 hover:border-amber-400 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden shadow-2xs" href="/services/small-group-bookings">
+        <!-- Glowing Border Beam (offset) -->
+        <div class="border-beam-spinning-delayed"></div>
+        
+        <!-- Card Inner Surface -->
+        <div class="relative z-10 w-full h-full bg-[#edf5eb] group-hover:bg-[#e4efe2] rounded-[calc(1rem-1.5px)] p-4 md:p-5 flex flex-col justify-between transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-secondary text-white shadow-sm group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-lg">groups</span>
+              </span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-secondary bg-secondary/15 px-2.5 py-0.5 rounded-full border border-secondary/20">Workspaces &amp; Teams</span>
+            </div>
+            <h2 class="font-headline-sm text-base md:text-lg font-bold text-primary mb-1 group-hover:text-secondary transition-colors">
+              Group Bookings
+            </h2>
+            <p class="font-body-md text-xs md:text-sm text-on-surface-variant leading-relaxed line-clamp-2">
+              Reserved seating, power outlets, and 70+ Mbps WiFi for digital nomad teams, workshops, and gatherings.
+            </p>
           </div>
-          <h2 class="font-headline-sm text-base md:text-lg font-bold text-primary mb-1 group-hover:text-secondary transition-colors">
-            Group Bookings
-          </h2>
-          <p class="font-body-md text-xs md:text-sm text-on-surface-variant leading-relaxed line-clamp-2">
-            Reserved seating, power outlets, and 70+ Mbps WiFi for digital nomad teams, workshops, and gatherings.
-          </p>
-        </div>
-        <div class="relative z-10 mt-3.5 pt-2.5 border-t border-secondary/15 flex items-center justify-between">
-          <span class="inline-flex items-center gap-1.5 bg-secondary text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded shadow-sm group-hover:bg-secondary/90 transition-colors">
-            <span>Explore Bookings</span>
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </span>
-          <span class="text-[11px] font-semibold text-secondary/80">10-20 Seats</span>
+          <div class="mt-3.5 pt-2.5 border-t border-secondary/15 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 bg-secondary text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded shadow-sm group-hover:bg-secondary/90 transition-colors">
+              <span>Explore Bookings</span>
+              <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </span>
+            <span class="text-[11px] font-semibold text-secondary/80">10-20 Seats</span>
+          </div>
         </div>
       </a>
     </div>
