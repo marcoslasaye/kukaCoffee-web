@@ -182,80 +182,28 @@ const schema = {
   <section class="pt-6 pb-16 px-4 md:px-12 bg-surface-container relative" id="menu">
     <div class="max-w-6xl mx-auto">
 
-      <!-- Sticky Category Navigation: Mobile Expandable Card / Desktop Tabs -->
+      <!-- Sticky Category Navigation: Mobile Single Button Bar / Desktop Tabs -->
       <nav aria-label="Menu Categories" class="sticky top-[69px] z-40 bg-surface-container/95 backdrop-blur-md py-2.5 -mx-4 px-4 md:mx-0 md:px-0 mb-8 border-b border-outline-variant/30 transition-all shadow-sm">
-        <!-- Mobile Category Expandable Card (< md) -->
-        <div class="md:hidden">
-          <button 
-            type="button" 
-            id="mobile-menu-toggle"
-            class="w-full flex items-center justify-between p-3 rounded-xl bg-surface-bright border border-amber-400/50 hover:border-amber-400 shadow-2xs text-primary font-bold active:scale-[0.98] transition-all touch-manipulation cursor-pointer"
-            aria-expanded="false"
-            aria-controls="mobile-menu-dropdown"
-          >
-            <div class="flex items-center gap-2.5">
-              <span id="mobile-menu-active-icon" class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-on-primary shadow-xs">
-                <span class="material-symbols-outlined text-base">local_cafe</span>
-              </span>
-              <div class="text-left">
-                <div class="flex items-center gap-2">
-                  <span id="mobile-menu-active-title" class="text-sm font-extrabold text-primary">Coffee</span>
-                  <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">Category</span>
-                </div>
-                <span class="block text-[11px] font-normal text-on-surface-variant">Tap to jump to category</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-1.5 text-primary">
-              <span class="text-[11px] font-semibold text-primary/80">Menu</span>
-              <span id="mobile-menu-chevron" class="material-symbols-outlined text-xl transition-transform duration-300">expand_more</span>
-            </div>
-          </button>
-
-          <!-- Mobile Dropdown List -->
-          <div 
-            id="mobile-menu-dropdown" 
-            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out"
-          >
-            <div class="overflow-hidden">
-              <div class="pt-2 pb-1 space-y-1.5">
-                <a href="#cluster-coffee" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Coffee" data-icon="local_cafe">
-                  <div class="flex items-center gap-2.5">
-                    <span class="material-symbols-outlined text-base text-primary">local_cafe</span>
-                    <span>Coffee (Single-Origin Espresso &amp; Lattes)</span>
-                  </div>
-                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
-                </a>
-                <a href="#cluster-non-coffee" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Non Coffee" data-icon="local_bar">
-                  <div class="flex items-center gap-2.5">
-                    <span class="material-symbols-outlined text-base text-primary">local_bar</span>
-                    <span>Non Coffee &amp; Artisan Teas</span>
-                  </div>
-                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
-                </a>
-                <a href="#cluster-matcha" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Matcha" data-icon="emoji_food_beverage">
-                  <div class="flex items-center gap-2.5">
-                    <span class="material-symbols-outlined text-base text-primary">emoji_food_beverage</span>
-                    <span>Matcha (Japanese Ceremonial Grade)</span>
-                  </div>
-                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
-                </a>
-                <a href="#cluster-smoothie" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Smoothie" data-icon="blender">
-                  <div class="flex items-center gap-2.5">
-                    <span class="material-symbols-outlined text-base text-primary">blender</span>
-                    <span>Smoothies &amp; Tropical Bowls</span>
-                  </div>
-                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
-                </a>
-                <a href="#cluster-bakery" class="mobile-cat-item flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-xs transition-all touch-manipulation" data-category="Bakery" data-icon="bakery_dining">
-                  <div class="flex items-center gap-2.5">
-                    <span class="material-symbols-outlined text-base text-primary">bakery_dining</span>
-                    <span>Artisan Bakery &amp; Croissants</span>
-                  </div>
-                  <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
-                </a>
-              </div>
+        <!-- Mobile Single-Bar Category Trigger (< md) -->
+        <div class="md:hidden flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2 min-w-0">
+            <span id="mobile-current-icon" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-primary/10 text-primary shrink-0">
+              <span class="material-symbols-outlined text-base">local_cafe</span>
+            </span>
+            <div class="min-w-0">
+              <span id="mobile-current-title" class="block text-xs font-bold text-primary truncate">Coffee Menu</span>
             </div>
           </div>
+          <button 
+            type="button" 
+            id="mobile-category-sheet-open"
+            class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-label-lg text-xs uppercase font-bold tracking-wider px-3.5 py-1.5 rounded-full shadow-sm active:scale-95 transition-all touch-manipulation cursor-pointer shrink-0 border border-primary/20"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+          >
+            <span class="material-symbols-outlined text-sm">menu</span>
+            <span>Categories</span>
+          </button>
         </div>
 
         <!-- Desktop Horizontal Tabs (>= md) -->
@@ -702,6 +650,97 @@ const schema = {
       </div>
     </div>
   </section>
+
+  <!-- Mobile Category Drawer / Bottom Sheet Modal -->
+  <div id="category-drawer" class="fixed inset-0 z-50 hidden transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <!-- Backdrop overlay -->
+    <div id="category-drawer-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-xs transition-opacity cursor-pointer"></div>
+    
+    <!-- Sheet Container -->
+    <div id="category-drawer-sheet" class="absolute bottom-0 inset-x-0 bg-surface-bright rounded-t-3xl p-5 border-t border-outline-variant/30 shadow-2xl max-h-[85vh] overflow-y-auto transform translate-y-full transition-transform duration-300 ease-out z-10">
+      <!-- Drag handle -->
+      <div class="w-12 h-1.5 bg-outline-variant/50 rounded-full mx-auto mb-4"></div>
+
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between pb-3 border-b border-outline-variant/20 mb-3">
+        <div>
+          <h3 id="drawer-title" class="font-headline-sm text-base font-bold text-primary">Menu Categories</h3>
+          <p class="text-xs text-on-surface-variant">Tap to jump straight to your section</p>
+        </div>
+        <button type="button" id="category-drawer-close" class="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all border border-outline-variant/30 cursor-pointer">
+          <span class="material-symbols-outlined text-lg">close</span>
+        </button>
+      </div>
+
+      <!-- Category Buttons List -->
+      <div class="space-y-2">
+        <a href="#cluster-coffee" class="drawer-cat-link flex items-center justify-between p-3 rounded-xl bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-sm shadow-2xs transition-all touch-manipulation" data-category="Coffee" data-icon="local_cafe">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-lg">local_cafe</span>
+            </span>
+            <div class="text-left">
+              <span class="block text-sm font-bold text-primary">Coffee</span>
+              <span class="block text-[11px] font-normal text-on-surface-variant">Single-origin espresso, flat whites, iced lattes</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-primary text-base">chevron_right</span>
+        </a>
+
+        <a href="#cluster-non-coffee" class="drawer-cat-link flex items-center justify-between p-3 rounded-xl bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-sm shadow-2xs transition-all touch-manipulation" data-category="Non Coffee" data-icon="local_bar">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-lg">local_bar</span>
+            </span>
+            <div class="text-left">
+              <span class="block text-sm font-bold text-primary">Non Coffee</span>
+              <span class="block text-[11px] font-normal text-on-surface-variant">Signature teas, chocolate &amp; sparkling refreshers</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-primary text-base">chevron_right</span>
+        </a>
+
+        <a href="#cluster-matcha" class="drawer-cat-link flex items-center justify-between p-3 rounded-xl bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-sm shadow-2xs transition-all touch-manipulation" data-category="Matcha" data-icon="emoji_food_beverage">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center">
+              <span class="material-symbols-outlined text-lg">emoji_food_beverage</span>
+            </span>
+            <div class="text-left">
+              <span class="block text-sm font-bold text-primary">Matcha</span>
+              <span class="block text-[11px] font-normal text-on-surface-variant">Japanese ceremonial grade matcha lattes</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-primary text-base">chevron_right</span>
+        </a>
+
+        <a href="#cluster-smoothie" class="drawer-cat-link flex items-center justify-between p-3 rounded-xl bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-sm shadow-2xs transition-all touch-manipulation" data-category="Smoothie" data-icon="blender">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-lg">blender</span>
+            </span>
+            <div class="text-left">
+              <span class="block text-sm font-bold text-primary">Smoothies</span>
+              <span class="block text-[11px] font-normal text-on-surface-variant">Fresh dragon fruit, mango &amp; tropical bowls</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-primary text-base">chevron_right</span>
+        </a>
+
+        <a href="#cluster-bakery" class="drawer-cat-link flex items-center justify-between p-3 rounded-xl bg-surface hover:bg-surface-container active:scale-[0.98] border border-outline-variant/30 text-primary font-bold text-sm shadow-2xs transition-all touch-manipulation" data-category="Bakery" data-icon="bakery_dining">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-700 flex items-center justify-center">
+              <span class="material-symbols-outlined text-lg">bakery_dining</span>
+            </span>
+            <div class="text-left">
+              <span class="block text-sm font-bold text-primary">Bakery</span>
+              <span class="block text-[11px] font-normal text-on-surface-variant">Butter croissants, almond pastries &amp; daily bites</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-primary text-base">chevron_right</span>
+        </a>
+      </div>
+    </div>
+  </div>
   </main>
   <script is:inline>
 
@@ -726,54 +765,61 @@ const schema = {
       });
     });
 
-    // Mobile category selector dropdown
-    const mobileToggle = document.getElementById('mobile-menu-toggle');
-    const mobileDropdown = document.getElementById('mobile-menu-dropdown');
-    const mobileChevron = document.getElementById('mobile-menu-chevron');
-    const activeIcon = document.getElementById('mobile-menu-active-icon');
-    const activeTitle = document.getElementById('mobile-menu-active-title');
-    const mobileItems = document.querySelectorAll('.mobile-cat-item');
+    // Mobile Bottom Sheet Drawer Logic
+    const drawer = document.getElementById('category-drawer');
+    const drawerSheet = document.getElementById('category-drawer-sheet');
+    const drawerBackdrop = document.getElementById('category-drawer-backdrop');
+    const openBtn = document.getElementById('mobile-category-sheet-open');
+    const closeBtn = document.getElementById('category-drawer-close');
+    const drawerLinks = document.querySelectorAll('.drawer-cat-link');
+    const mobileCurrentTitle = document.getElementById('mobile-current-title');
+    const mobileCurrentIcon = document.getElementById('mobile-current-icon');
 
-    function closeMobileMenu() {
-      if (!mobileToggle || !mobileDropdown) return;
-      mobileToggle.setAttribute('aria-expanded', 'false');
-      mobileDropdown.classList.remove('grid-rows-[1fr]');
-      mobileDropdown.classList.add('grid-rows-[0fr]');
-      if (mobileChevron) mobileChevron.classList.remove('rotate-180');
+    function openDrawer() {
+      if (!drawer || !drawerSheet) return;
+      drawer.classList.remove('hidden');
+      void drawer.offsetWidth;
+      drawer.classList.remove('opacity-0', 'pointer-events-none');
+      drawer.classList.add('opacity-100');
+      drawerSheet.classList.remove('translate-y-full');
+      drawerSheet.classList.add('translate-y-0');
+      document.body.style.overflow = 'hidden';
     }
 
-    if (mobileToggle && mobileDropdown) {
-      mobileToggle.addEventListener('click', () => {
-        const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
-        mobileToggle.setAttribute('aria-expanded', String(!isOpen));
-        if (isOpen) {
-          mobileDropdown.classList.remove('grid-rows-[1fr]');
-          mobileDropdown.classList.add('grid-rows-[0fr]');
-          if (mobileChevron) mobileChevron.classList.remove('rotate-180');
-        } else {
-          mobileDropdown.classList.remove('grid-rows-[0fr]');
-          mobileDropdown.classList.add('grid-rows-[1fr]');
-          if (mobileChevron) mobileChevron.classList.add('rotate-180');
-        }
-      });
+    function closeDrawer() {
+      if (!drawer || !drawerSheet) return;
+      drawer.classList.remove('opacity-100');
+      drawer.classList.add('opacity-0', 'pointer-events-none');
+      drawerSheet.classList.remove('translate-y-0');
+      drawerSheet.classList.add('translate-y-full');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        drawer.classList.add('hidden');
+      }, 300);
     }
 
-    mobileItems.forEach(item => {
-      item.addEventListener('click', (e) => {
+    if (openBtn) openBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+
+    drawerLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
         e.preventDefault();
-        const targetId = item.getAttribute('href').substring(1);
+        const targetId = link.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        const catName = item.getAttribute('data-category');
-        const catIcon = item.getAttribute('data-icon');
+        const catName = link.getAttribute('data-category');
+        const catIcon = link.getAttribute('data-icon');
 
-        if (activeTitle) activeTitle.textContent = catName;
-        if (activeIcon) activeIcon.innerHTML = `<span class="material-symbols-outlined text-base">${catIcon}</span>`;
+        if (mobileCurrentTitle) mobileCurrentTitle.textContent = `${catName} Menu`;
+        if (mobileCurrentIcon) mobileCurrentIcon.innerHTML = `<span class="material-symbols-outlined text-base">${catIcon}</span>`;
 
-        closeMobileMenu();
+        closeDrawer();
 
         if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-          history.replaceState(null, null, `#${targetId}`);
+          setTimeout(() => {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            history.replaceState(null, null, `#${targetId}`);
+          }, 150);
         }
       });
     });
@@ -798,10 +844,10 @@ const schema = {
         if (entry.isIntersecting) {
           const activeId = entry.target.id;
 
-          // Sync mobile dropdown display
+          // Sync mobile current label display
           if (catMap[activeId]) {
-            if (activeTitle) activeTitle.textContent = catMap[activeId].name;
-            if (activeIcon) activeIcon.innerHTML = `<span class="material-symbols-outlined text-base">${catMap[activeId].icon}</span>`;
+            if (mobileCurrentTitle) mobileCurrentTitle.textContent = `${catMap[activeId].name} Menu`;
+            if (mobileCurrentIcon) mobileCurrentIcon.innerHTML = `<span class="material-symbols-outlined text-base">${catMap[activeId].icon}</span>`;
           }
 
           tabs.forEach(tab => {
