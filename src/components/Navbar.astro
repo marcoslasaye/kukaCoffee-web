@@ -1,4 +1,6 @@
 ---
+import BorderBeam from './BorderBeam.astro';
+
 interface Props {
   currentPath?: string;
 }
@@ -23,12 +25,10 @@ const { currentPath = '' } = Astro.props;
     </div>
 
     <!-- Highlighted Mobile Actions -->
-    <div class="flex md:hidden items-center gap-2.5">
-      <a class="bg-primary text-on-primary text-xs uppercase tracking-wider font-bold px-3.5 py-2 rounded-lg shadow-sm active:scale-95" href="/#location">
-        Location
-      </a>
-      <button aria-label="Open Navigation Menu" class="flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container border border-outline-variant/60 text-primary hover:bg-surface-container-high active:scale-90 transition-all shadow-sm" id="mobile-menu-btn" type="button">
+    <div class="flex md:hidden items-center">
+      <button aria-label="Open Navigation Menu" class="relative flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container border border-primary/40 text-primary hover:bg-surface-container-high active:scale-90 transition-all shadow-sm touch-manipulation cursor-pointer overflow-hidden" id="mobile-menu-btn" type="button">
         <span class="material-symbols-outlined text-2xl">menu</span>
+        <BorderBeam size={48} duration={4} borderWidth={2} radius={8} colorFrom="#b85d38" colorTo="#d97706" />
       </button>
     </div>
   </div>
@@ -84,7 +84,7 @@ const { currentPath = '' } = Astro.props;
     <!-- Drawer Footer Actions -->
     <div class="pt-6 border-t border-outline-variant/30 flex flex-col gap-3">
       <a class="w-full text-center bg-primary text-on-primary font-bold text-sm uppercase tracking-wider py-3.5 rounded-xl shadow-md active:scale-95" href="/#location">
-        Visit Us in Tegallalang
+        Location
       </a>
       <a class="w-full text-center inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold text-sm uppercase tracking-wider py-3 rounded-xl shadow-md active:scale-95" href="https://wa.me/6285737600907?text=Hi%20KUKA%2C%20I%20have%20a%20question%20about%20your%20coffee%20and%20location." target="_blank" rel="noopener noreferrer">
         <span class="material-symbols-outlined text-lg">chat</span>
