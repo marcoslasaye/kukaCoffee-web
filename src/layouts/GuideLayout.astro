@@ -1,0 +1,54 @@
+﻿---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  badge: string;
+  updatedDate: string;
+  canonical: string;
+  schema?: object;
+  currentPath?: string;
+}
+
+const {
+  title,
+  description,
+  badge,
+  updatedDate,
+  canonical,
+  schema,
+  currentPath,
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogType="article"
+  schema={schema}
+  currentPath={currentPath}
+>
+  <main class="max-w-3xl mx-auto px-4 md:px-6 py-12">
+    <!-- Article Header -->
+    <header class="mb-10">
+      <div class="flex items-center gap-2 text-xs text-on-surface-variant mb-4">
+        <span class="bg-secondary-container text-secondary font-bold px-2.5 py-1 rounded-full uppercase">{badge}</span>
+        <span>•</span>
+        <span>Updated {updatedDate}</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold text-primary font-headline-sm leading-tight mb-4">
+        {title}
+      </h1>
+      <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+        {description}
+      </p>
+    </header>
+
+    <!-- Markdown Content Container -->
+    <article class="prose prose-stone max-w-none text-on-surface font-body-md">
+      <slot />
+    </article>
+  </main>
+</BaseLayout>

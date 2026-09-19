@@ -1,0 +1,679 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Menu",
+      "@id": "https://kukacoffee.id/services/coffee-and-bites#menu",
+      "name": "KUKA Coffee & Eatery Menu",
+      "url": "https://kukacoffee.id/services/coffee-and-bites#menu",
+      "description": "Full menu for KUKA Coffee & Eatery in Tegallalang, featuring single-origin espresso, refreshing non-coffee drinks, ceremonial matcha, natural fruit smoothies, and freshly baked croissants.",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Coffee",
+          "description": "100% Bali Arabica single-origin espresso drinks, hot and iced."
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Non Coffee",
+          "description": "Chilled and warm refreshments, teas, whole young coconut, and fresh beverages."
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Matcha",
+          "description": "Japanese matcha creations, cold cloud foam, and fruit infusions."
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Smoothie",
+          "description": "Fresh fruit, yogurt, and honey blended smoothies."
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Bakery",
+          "description": "Fresh butter, chocolate, and almond croissants baked daily."
+        }
+      ]
+    },
+    {
+      "@type": "CafeOrCoffeeShop",
+      "@id": "https://kukacoffee.id/#cafe",
+      "name": "KUKA Coffee Shop",
+      "hasMenu": "https://kukacoffee.id/services/coffee-and-bites#menu",
+      "image": "https://kukacoffee.id/assets/images/entrance-1.webp",
+      "telephone": "+6285737600907",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raya Tegallalang",
+        "addressLocality": "Gianyar",
+        "addressRegion": "Bali",
+        "postalCode": "80561",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.3939823,
+        "longitude": 115.2927191
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What origins of coffee do you serve in Tegallalang?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve 100% Arabica beans from the volcanic highlands of Munduk and Kintamani, grown at 1,350 meters above sea level."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a reservation for coffee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No reservation needed. Walk-ins are always welcome from 7:00 AM to 6:00 PM daily."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Specialty Coffee & Bakery Menu | KUKA Coffee Tegallalang, Bali"
+  description="100% Bali Arabica single-origin coffee and fresh bakery bites. View our full drinks and food menu in Tegallalang, Bali."
+  canonical="https://kukacoffee.id/services/coffee-and-bites"
+  schema={schema}
+  currentPath="/services/coffee-and-bites"
+>
+  <main>
+    <!-- Hero Section -->
+  <header class="py-16 md:py-24 px-4 md:px-12 bg-surface-container-low border-b border-outline-variant/30">
+    <div class="max-w-5xl mx-auto text-center">
+      <span class="bg-secondary-container text-secondary text-xs uppercase font-bold px-3 py-1 rounded-full tracking-widest inline-block mb-4">
+        Coffee Shop &amp; Bakery • Tegallalang, Bali
+      </span>
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-primary font-headline-sm leading-tight mb-6">
+        Single-Origin Coffee &amp; Fresh Eatery Bites
+      </h1>
+      <p class="text-base md:text-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed mb-8">
+        100% Arabica beans grown in northern Bali at 1,350m altitude. Freshly brewed at our open-air Tegallalang coffee shop, paired with delicious bakery croissants and snacks overlooking the rice terraces.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a class="bg-primary text-on-primary font-bold text-xs uppercase px-8 py-4 rounded shadow-md hover:bg-primary-container transition-all" href="/#location">
+          Visit Us (7:00 AM - 6:00 PM)
+        </a>
+        <a class="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold text-xs uppercase px-7 py-4 rounded hover:bg-[#1EBE5D] transition-all shadow-md" href="https://wa.me/6285737600907?text=Hi%20KUKA%2C%20I%20have%20a%20question%20about%20your%20coffee%20and%20menu." target="_blank" rel="noopener noreferrer">
+          <span class="material-symbols-outlined text-base">chat</span>
+          WhatsApp Us
+        </a>
+        <a class="bg-surface border border-outline-variant/60 text-primary font-bold text-xs uppercase px-7 py-4 rounded hover:bg-surface-container transition-all" href="#menu">
+          Coffee Menu
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Detailed Service Explanation -->
+  <section class="py-16 px-4 md:px-12 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-6 space-y-6">
+        <h2 class="text-2xl md:text-4xl font-bold text-primary font-headline-sm">
+          High-Altitude Beans. Brewed Simply and Well.
+        </h2>
+        <p class="text-on-surface-variant leading-relaxed">
+          No gimmicks and no tourist traps. We source high-altitude Arabica from small farms in Munduk and Kintamani, roast them clean, and extract every shot with precision on our espresso setup.
+        </p>
+        <div class="grid grid-cols-2 gap-4 pt-2">
+          <div class="border-l-2 border-primary pl-4">
+            <span class="block text-2xl font-bold text-primary font-headline-sm">1,350m</span>
+            <span class="text-xs uppercase text-on-surface-variant font-semibold">Volcanic Elevation</span>
+          </div>
+          <div class="border-l-2 border-primary pl-4">
+            <span class="block text-2xl font-bold text-primary font-headline-sm">100% Arabica</span>
+            <span class="text-xs uppercase text-on-surface-variant font-semibold">Single-Origin</span>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-lg h-80 md:h-96">
+        <img alt="Espresso extraction with single origin beans at KUKA" class="w-full h-full object-cover" src="./assets/images/entrance-2.webp" loading="lazy" decoding="async"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section with Cluster Navigation / Sticky Category Tabs -->
+  <section class="py-16 px-4 md:px-12 bg-surface-container relative" id="menu">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="bg-secondary/10 text-secondary-fixed-dim font-label-sm text-xs px-3 py-1 rounded inline-block w-max mb-3 uppercase tracking-wider font-semibold">Tegallalang Cafe &amp; Eatery</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary font-headline-sm mb-3">Our Menu</h2>
+        <p class="text-sm md:text-base text-on-surface-variant">Quality single-origin coffee, refreshing teas, matcha, smoothies, and freshly baked pastries.</p>
+      </div>
+
+      <!-- Sticky Category Tabs Navigation (Cluster Navigation) -->
+      <nav aria-label="Menu Categories" class="sticky top-[69px] z-40 bg-surface-container/95 backdrop-blur-md py-3 -mx-4 px-4 md:mx-0 md:px-0 mb-10 border-b border-outline-variant/30 transition-all shadow-sm">
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1" id="menu-cluster-tabs" role="tablist">
+          <a class="menu-tab-btn active inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 bg-primary text-on-primary shadow-sm" href="#cluster-coffee" role="tab">
+            <span class="material-symbols-outlined text-base">local_cafe</span>
+            <span>Coffee</span>
+          </a>
+          <a class="menu-tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 bg-surface text-on-surface-variant hover:text-primary hover:bg-surface-bright border border-outline-variant/40" href="#cluster-non-coffee" role="tab">
+            <span class="material-symbols-outlined text-base">local_bar</span>
+            <span>Non Coffee</span>
+          </a>
+          <a class="menu-tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 bg-surface text-on-surface-variant hover:text-primary hover:bg-surface-bright border border-outline-variant/40" href="#cluster-matcha" role="tab">
+            <span class="material-symbols-outlined text-base">emoji_food_beverage</span>
+            <span>Matcha</span>
+          </a>
+          <a class="menu-tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 bg-surface text-on-surface-variant hover:text-primary hover:bg-surface-bright border border-outline-variant/40" href="#cluster-smoothie" role="tab">
+            <span class="material-symbols-outlined text-base">blender</span>
+            <span>Smoothie</span>
+          </a>
+          <a class="menu-tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 bg-surface text-on-surface-variant hover:text-primary hover:bg-surface-bright border border-outline-variant/40" href="#cluster-bakery" role="tab">
+            <span class="material-symbols-outlined text-base">bakery_dining</span>
+            <span>Bakery</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Menu Clusters Container -->
+      <div class="space-y-16">
+        
+        <!-- Cluster: Coffee -->
+        <div class="menu-cluster scroll-mt-36" id="cluster-coffee">
+          <div class="flex items-center justify-between border-b border-outline-variant/40 pb-3 mb-6">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded bg-primary/10 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">local_cafe</span>
+              </span>
+              <h3 class="text-xl md:text-2xl font-bold text-primary font-headline-sm">Coffee</h3>
+            </div>
+            <span class="text-xs text-on-surface-variant font-medium hidden sm:inline-block">100% Bali Arabica • Munduk &amp; Kintamani</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Espresso</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Single or Double coffee shots</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 25.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Americano</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Double shot espresso with hot water</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 28.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Americano</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Double shot espresso with water and ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 30.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Long Black</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Espresso pulled over hot water with rich crema</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 28.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Long Black</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Espresso pulled over cold water and ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 30.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Cappuccino</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Espresso with steamed milk and creamy milk foam</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 30.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Cappuccino</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Chilled espresso with cold milk and creamy foam</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 35.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Latte</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Espresso with steamed milk and delicate microfoam</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 30.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Latte</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Espresso with chilled milk over ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 35.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Flat White</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Double shot espresso with steamed milk and microfoam</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 30.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Café Mocha</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Espresso blended with rich chocolate and steamed milk</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 35.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Café Mocha</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Chilled espresso and chocolate with cold milk and ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 40.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Caramel Macchiato</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Steamed milk marked with espresso and caramel drizzle</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 35.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Caramel Macchiato</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Chilled milk over ice marked with espresso and caramel drizzle</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 40.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cluster: Non Coffee -->
+        <div class="menu-cluster scroll-mt-36" id="cluster-non-coffee">
+          <div class="flex items-center justify-between border-b border-outline-variant/40 pb-3 mb-6">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded bg-primary/10 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">local_bar</span>
+              </span>
+              <h3 class="text-xl md:text-2xl font-bold text-primary font-headline-sm">Non Coffee</h3>
+            </div>
+            <span class="text-xs text-on-surface-variant font-medium hidden sm:inline-block">Warm &amp; Iced Refreshments</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Chocolate</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Rich cocoa blended with warm steamed milk</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 30.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Chocolate</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Chilled chocolate drink served over ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 35.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Tea</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Freshly brewed hot tea</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 15.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Tea</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Refreshing chilled tea over ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 20.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Lychee Tea</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Refreshing ice tea infused with sweet lychee flavor</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 25.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Lemon Tea</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Warm brewed tea with fresh lemon</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 20.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Lemon Tea</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Chilled tea with fresh lemon slice and ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 25.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Mineral Water</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Bottled fresh mineral water</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 10.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Small Beer Bintang</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Chilled Indonesian Bintang beer bottle</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 30.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Whole Coconut</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Fresh young whole coconut water</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 20.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Coca Cola / Zero</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Canned Coca-Cola or Coca-Cola Zero served chilled</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 20.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cluster: Matcha -->
+        <div class="menu-cluster scroll-mt-36" id="cluster-matcha">
+          <div class="flex items-center justify-between border-b border-outline-variant/40 pb-3 mb-6">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded bg-primary/10 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">emoji_food_beverage</span>
+              </span>
+              <h3 class="text-xl md:text-2xl font-bold text-primary font-headline-sm">Matcha</h3>
+            </div>
+            <span class="text-xs text-on-surface-variant font-medium hidden sm:inline-block">Japanese Ceremonial Grade</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Hot Matcha Latte</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Japanese matcha whisked with warm steamed milk</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 30.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Ice Matcha Latte</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Japanese matcha with chilled milk over ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 35.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Creamy Matcha (Ice)</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Matcha, milk, and sweet vanilla cream over ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 40.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Strawberry Matcha (Ice)</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Matcha, milk, vanilla cream, and homemade strawberry jam over ice</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 40.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Matcha Cloud (Ice)</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Matcha and vanilla cream floated over fresh coconut water</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 40.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cluster: Smoothie -->
+        <div class="menu-cluster scroll-mt-36" id="cluster-smoothie">
+          <div class="flex items-center justify-between border-b border-outline-variant/40 pb-3 mb-6">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded bg-primary/10 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">blender</span>
+              </span>
+              <h3 class="text-xl md:text-2xl font-bold text-primary font-headline-sm">Smoothie</h3>
+            </div>
+            <span class="text-xs text-on-surface-variant font-medium hidden sm:inline-block">Real Fresh Tropical Fruit &amp; Yogurt</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Pink Banana</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Strawberry, banana, yogurt, and honey smoothie</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 40.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Mango Crush</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Fresh mango, banana, yogurt, and honey smoothie</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 40.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Berry Island</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Strawberry, blueberry, yogurt, and honey smoothie</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 45.000</span>
+            </div>
+
+            <div class="bg-surface p-4 md:p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex justify-between items-start gap-4">
+              <div class="space-y-1">
+                <h4 class="font-bold text-primary text-base">Sunset Point</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Fresh strawberry, mango, yogurt, and honey smoothie</p>
+              </div>
+              <span class="text-sm md:text-base font-bold text-primary whitespace-nowrap">IDR 45.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cluster: Bakery -->
+        <div class="menu-cluster scroll-mt-36" id="cluster-bakery">
+          <div class="flex items-center justify-between border-b border-outline-variant/40 pb-3 mb-6">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded bg-primary/10 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">bakery_dining</span>
+              </span>
+              <h3 class="text-xl md:text-2xl font-bold text-primary font-headline-sm">Bakery &amp; Snacks</h3>
+            </div>
+            <span class="text-xs text-on-surface-variant font-medium hidden sm:inline-block">Fresh French Butter Pastries</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-surface p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex flex-col justify-between">
+              <div class="space-y-1 mb-4">
+                <h4 class="font-bold text-primary text-base">Butter Croissant</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Classic golden flaky French butter croissant</p>
+              </div>
+              <span class="text-base font-bold text-primary">IDR 22.000</span>
+            </div>
+
+            <div class="bg-surface p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex flex-col justify-between">
+              <div class="space-y-1 mb-4">
+                <h4 class="font-bold text-primary text-base">Chocolate Croissant</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Flaky pastry filled with rich decadent chocolate</p>
+              </div>
+              <span class="text-base font-bold text-primary">IDR 28.000</span>
+            </div>
+
+            <div class="bg-surface p-5 rounded-xl border border-outline-variant/30 shadow-[0_2px_8px_rgba(74,44,42,0.03)] flex flex-col justify-between">
+              <div class="space-y-1 mb-4">
+                <h4 class="font-bold text-primary text-base">Almond Croissant</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Flaky croissant filled with almond frangipane and topped with sliced almonds</p>
+              </div>
+              <span class="text-base font-bold text-primary">IDR 30.000</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 px-4 md:px-12 max-w-4xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary font-headline-sm mb-8 text-center">Frequently Asked Questions</h2>
+    <div class="space-y-6 text-left">
+      <div class="border-b border-outline-variant/30 pb-4">
+        <h3 class="font-bold text-primary text-base md:text-lg mb-2">What makes Munduk &amp; Kintamani coffee special?</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">
+          The mineral-rich volcanic soil and high altitude give the beans slower maturation, resulting in denser beans with distinct sweetness and balanced body compared to lowland commercial robusta.
+        </p>
+      </div>
+      <div class="border-b border-outline-variant/30 pb-4">
+        <h3 class="font-bold text-primary text-base md:text-lg mb-2">Do you offer dairy-free milk alternatives?</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">
+          Yes! We have oat milk available for all coffee and matcha drinks, plus fresh whole young coconuts and fresh fruit smoothies.
+        </p>
+      </div>
+      <div class="border-b border-outline-variant/30 pb-4">
+        <h3 class="font-bold text-primary text-base md:text-lg mb-2">Are the bakery croissants fresh daily?</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">
+          Yes, our butter, chocolate, and almond croissants are prepared fresh every morning to pair perfectly with your morning brew.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal Cross-Linking to other services -->
+  <section class="py-12 px-4 md:px-12 bg-surface-container-low border-t border-outline-variant/30">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-lg font-bold text-primary font-headline-sm mb-4">Explore More at KUKA:</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="/#location-access" class="p-4 bg-surface rounded-lg border border-outline-variant/30 hover:border-primary transition-colors block">
+          <span class="font-bold text-primary block">Easy Main Road Access &amp; Parking →</span>
+          <span class="text-xs text-on-surface-variant">Right on Jl. Raya Tegallalang with nearby ATM &amp; Indomaret.</span>
+        </a>
+        <a href="/services/small-group-bookings" class="p-4 bg-surface rounded-lg border border-outline-variant/30 hover:border-primary transition-colors block">
+          <span class="font-bold text-primary block">Small Group Bookings (10-20 Pax) →</span>
+          <span class="text-xs text-on-surface-variant">Table reservations for team syncs, creative meetups, and small workshops.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+  <script is:inline>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.menu-tab-btn');
+    const clusters = document.querySelectorAll('.menu-cluster');
+    const tabContainer = document.getElementById('menu-cluster-tabs');
+
+    if (!tabs.length || !clusters.length) return;
+
+    // Click handler for smooth scrolling
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = tab.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          history.replaceState(null, null, `#${targetId}`);
+        }
+      });
+    });
+
+    // IntersectionObserver for active tab highlight
+    const observerOptions = {
+      root: null,
+      rootMargin: '-140px 0px -60% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const activeId = entry.target.id;
+          tabs.forEach(tab => {
+            const isMatch = tab.getAttribute('href') === `#${activeId}`;
+            if (isMatch) {
+              tab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+              tab.classList.remove('bg-surface', 'text-on-surface-variant', 'border', 'border-outline-variant/40');
+              
+              // Ensure tab is visible in horizontal overflow scroll
+              if (tabContainer) {
+                const tabLeft = tab.offsetLeft - tabContainer.offsetLeft;
+                const tabWidth = tab.offsetWidth;
+                const containerWidth = tabContainer.offsetWidth;
+                const scrollLeft = tabContainer.scrollLeft;
+
+                if (tabLeft < scrollLeft || (tabLeft + tabWidth) > (scrollLeft + containerWidth)) {
+                  tabContainer.scrollTo({
+                    left: tabLeft - (containerWidth / 2) + (tabWidth / 2),
+                    behavior: 'smooth'
+                  });
+                }
+              }
+            } else {
+              tab.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+              tab.classList.add('bg-surface', 'text-on-surface-variant', 'border', 'border-outline-variant/40');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    clusters.forEach(cluster => observer.observe(cluster));
+  });
+
+  </script>
+</BaseLayout>

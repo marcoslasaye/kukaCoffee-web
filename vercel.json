@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
@@ -43,6 +43,22 @@
       "source": "/services/specialty-coffee-tasting",
       "destination": "/services/coffee-and-bites",
       "permanent": true
+    },
+    {
+      "source": "/guides/:slug.html",
+      "destination": "/guides/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/services/:slug.html",
+      "destination": "/services/:slug",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml"
     }
   ]
 }

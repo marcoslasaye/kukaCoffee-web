@@ -1,0 +1,69 @@
+﻿[
+  {
+    "clusterId": "coffee",
+    "section": "Coffee",
+    "items": [
+      {"name": "Espresso", "description": "Single or Double coffee shots", "price": 25000},
+      {"name": "Hot Americano", "description": "Double shot espresso with hot water", "price": 28000},
+      {"name": "Ice Americano", "description": "Double shot espresso with water and ice", "price": 30000},
+      {"name": "Hot Long Black", "description": "Espresso pulled over hot water with rich crema", "price": 28000},
+      {"name": "Ice Long Black", "description": "Espresso pulled over cold water and ice", "price": 30000},
+      {"name": "Hot Cappuccino", "description": "Espresso with steamed milk and creamy milk foam", "price": 30000},
+      {"name": "Ice Cappuccino", "description": "Chilled espresso with cold milk and creamy foam", "price": 35000},
+      {"name": "Hot Latte", "description": "Espresso with steamed milk and delicate microfoam", "price": 30000},
+      {"name": "Ice Latte", "description": "Espresso with chilled milk over ice", "price": 35000},
+      {"name": "Flat White", "description": "Double shot espresso with steamed milk and microfoam", "price": 30000},
+      {"name": "Hot Café Mocha", "description": "Espresso blended with rich chocolate and steamed milk", "price": 35000},
+      {"name": "Ice Café Mocha", "description": "Chilled espresso and chocolate with cold milk and ice", "price": 40000},
+      {"name": "Hot Caramel Macchiato", "description": "Steamed milk marked with espresso and caramel drizzle", "price": 35000},
+      {"name": "Ice Caramel Macchiato", "description": "Chilled milk over ice marked with espresso and caramel drizzle", "price": 40000}
+    ]
+  },
+  {
+    "clusterId": "non-coffee",
+    "section": "Non Coffee",
+    "items": [
+      {"name": "Hot Chocolate", "description": "Rich cocoa blended with warm steamed milk", "price": 30000},
+      {"name": "Ice Chocolate", "description": "Chilled chocolate drink served over ice", "price": 35000},
+      {"name": "Hot Tea", "description": "Freshly brewed hot tea", "price": 15000},
+      {"name": "Ice Tea", "description": "Refreshing chilled tea over ice", "price": 20000},
+      {"name": "Ice Lychee Tea", "description": "Refreshing ice tea infused with sweet lychee flavor", "price": 25000},
+      {"name": "Hot Lemon Tea", "description": "Warm brewed tea with fresh lemon", "price": 20000},
+      {"name": "Ice Lemon Tea", "description": "Chilled tea with fresh lemon slice and ice", "price": 25000},
+      {"name": "Mineral Water", "description": "Bottled fresh mineral water", "price": 10000},
+      {"name": "Small Beer Bintang", "description": "Chilled Indonesian Bintang beer bottle", "price": 30000},
+      {"name": "Whole Coconut", "description": "Fresh young whole coconut water", "price": 20000},
+      {"name": "Coca Cola / Zero", "description": "Canned Coca-Cola or Coca-Cola Zero served chilled", "price": 20000}
+    ]
+  },
+  {
+    "clusterId": "matcha",
+    "section": "Matcha",
+    "items": [
+      {"name": "Hot Matcha Latte", "description": "Japanese matcha whisked with warm steamed milk", "price": 30000},
+      {"name": "Ice Matcha Latte", "description": "Japanese matcha with chilled milk over ice", "price": 35000},
+      {"name": "Creamy Matcha (Ice)", "description": "Matcha, milk, and sweet vanilla cream over ice", "price": 40000},
+      {"name": "Strawberry Matcha (Ice)", "description": "Matcha, milk, vanilla cream, and homemade strawberry jam over ice", "price": 40000},
+      {"name": "Matcha Cloud (Ice)", "description": "Matcha and vanilla cream floated over fresh coconut water", "price": 40000}
+    ]
+  },
+  {
+    "clusterId": "smoothie",
+    "section": "Smoothie",
+    "items": [
+      {"name": "Pink Banana", "description": "Strawberry, banana, yogurt, and honey smoothie", "price": 40000},
+      {"name": "Mango Crush", "description": "Fresh mango, banana, yogurt, and honey smoothie", "price": 40000},
+      {"name": "Berry Island", "description": "Strawberry, blueberry, yogurt, and honey smoothie", "price": 45000},
+      {"name": "Sunset Point", "description": "Fresh strawberry, mango, yogurt, and honey smoothie", "price": 45000}
+    ]
+  },
+  {
+    "clusterId": "bakery",
+    "section": "Bakery",
+    "items": [
+      {"name": "Butter Croissant", "description": "Classic golden flaky French butter croissant", "price": 22000},
+      {"name": "Chocolate Croissant", "description": "Flaky pastry filled with rich decadent chocolate", "price": 28000},
+      {"name": "Almond Croissant", "description": "Flaky croissant filled with almond frangipane and topped with sliced almonds", "price": 30000}
+    ]
+  }
+]

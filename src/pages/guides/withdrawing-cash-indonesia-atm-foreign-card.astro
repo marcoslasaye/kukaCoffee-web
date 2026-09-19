@@ -1,0 +1,244 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How Foreigners Can Withdraw Cash at Indonesian ATMs with Visa, Mastercard, Wise & Revolut",
+      "description": "A field-tested guide to taking out Indonesian Rupiah (IDR) from major bank ATMs across Bali without getting burned by dynamic currency conversion.",
+      "image": "https://kukacoffee.id/assets/images/customers-1.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "KUKA Coffee Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "KUKA Coffee Shop",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kukacoffee.id/assets/images/logo.webp"
+        }
+      },
+      "datePublished": "2026-09-16",
+      "dateModified": "2026-09-16"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I use foreign debit cards at any ATM in Indonesia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Any major state or private Indonesian bank ATM displaying the Visa, Mastercard, Plus, or Cirrus network logo will accept international cards, including Revolut and Wise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Indonesian bank ATM is the most reliable for foreign cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bank Central Asia (BCA) and Bank Mandiri are the most reliable options. They have high network uptime, clear English interfaces, and usually carry fresh 100,000 IDR notes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I choose 'With Conversion' or 'Without Conversion'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Always select 'Without Conversion' (or 'Decline Conversion' / 'Charge in IDR'). Choosing conversion gives you the local bank's inflated exchange rate, which adds an unnecessary 6% to 10% fee."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<GuideLayout
+  title="Withdrawing Cash in Indonesia with Foreign Cards (ATM Fees & Best Banks)"
+  description="Practical advice for tourists and nomads on withdrawing Rupiah safely, avoiding excessive conversion fees, and finding reliable ATMs in Bali."
+  badge="Bali Travel & Finance Guide"
+  updatedDate="September 2026"
+  canonical="https://kukacoffee.id/guides/withdrawing-cash-indonesia-atm-foreign-card"
+  schema={schema}
+  currentPath="/guides/withdrawing-cash-indonesia-atm-foreign-card"
+>
+  <!-- Quick Answer / Snippet Target -->
+  <section class="mb-10 bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+    <h2 class="text-xs uppercase font-bold text-secondary tracking-wider mb-2">Direct Answer</h2>
+    <p class="text-primary font-semibold leading-relaxed">
+      Foreigners can withdraw Indonesian Rupiah (IDR) at any major bank ATM in Indonesia (BCA, Mandiri, BNI, BRI) using Visa or Mastercard debit and credit cards, including Wise, Revolut, and traditional bank cards. Indonesian bank ATMs do not charge an operator fee to foreign cards; you only pay what your own bank charges. Always press "Continue Without Conversion" to avoid dynamic currency conversion markups.
+    </p>
+  </section>
+
+  <!-- Content Body -->
+  <article class="space-y-8 text-on-surface-variant leading-relaxed">
+    
+    <section>
+      <h2 class="text-2xl font-bold text-primary font-headline-sm mb-3">Which Cards Work in Indonesian ATMs?</h2>
+      <p class="mb-4">
+        As long as your card carries a <strong>Visa</strong> or <strong>Mastercard</strong> badge—or the Cirrus and Plus network symbols on the back—it will work across Indonesia.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4 text-sm">
+        <div class="p-4 bg-surface rounded-xl border border-outline-variant/30">
+          <h3 class="font-bold text-primary mb-1">Fintech &amp; Travel Cards</h3>
+          <p>Wise, Revolut, Monzo, N26, and Charles Schwab work smoothly. They give you the real exchange rate and don't charge foreign transaction markups within your monthly allowance.</p>
+        </div>
+        <div class="p-4 bg-surface rounded-xl border border-outline-variant/30">
+          <h3 class="font-bold text-primary mb-1">Traditional Bank Cards</h3>
+          <p>Chase, Wells Fargo, Santander, Barclays, CommBank, and most national banks work fine, though your home bank may charge an out-of-network fee ( to ) plus a 1% to 3% FX margin.</p>
+        </div>
+      </div>
+      <p>
+        American Express (Amex) and Discover are hit-or-miss. You might find an HSBC or CIMB Niaga machine that takes them in tourist hubs, but counting on them north of Denpasar is asking for trouble. Stick to Visa or Mastercard.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary font-headline-sm mb-3">The Best Indonesian Bank ATMs to Look For</h2>
+      <p class="mb-4">
+        Don't use standalone generic white ATMs sitting outside isolated beach shacks. Stick to recognized commercial and state-owned banks. The four you'll see everywhere:
+      </p>
+      
+      <div class="space-y-4">
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="text-lg font-bold text-primary">1. BCA (Bank Central Asia) — The Gold Standard</h3>
+          <p class="text-sm mt-1">
+            BCA is private, modern, and has the most stable software on the island. Their machines rarely go offline, their card readers are well-maintained, and their interface has clear English prompts. If you have a choice, pick BCA first.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-secondary pl-4">
+          <h3 class="text-lg font-bold text-primary">2. Bank Mandiri</h3>
+          <p class="text-sm mt-1">
+            Indonesia's largest state-owned bank. Reliable, widely distributed, and handles international chip-and-PIN cards with zero hiccups.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-outline pl-4">
+          <h3 class="text-lg font-bold text-primary">3. BNI (Bank Negara Indonesia)</h3>
+          <p class="text-sm mt-1">
+            Another solid state bank. Very common in smaller towns and along main regional roads like the route up through Tegallalang toward Kintamani.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-outline pl-4">
+          <h3 class="text-lg font-bold text-primary">4. BRI (Bank Rakyat Indonesia)</h3>
+          <p class="text-sm mt-1">
+            BRI has the largest rural footprint in the country. You will find a BRI ATM in almost every Balinese village. They work fine with foreign cards, though their software occasionally runs slower during peak afternoon hours.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The DCC Trap Warning -->
+    <section class="bg-surface-container p-6 rounded-2xl border-2 border-primary/20">
+      <h2 class="text-xl font-bold text-primary font-headline-sm mb-2 flex items-center gap-2">
+        <span class="material-symbols-outlined text-amber-600">warning</span>
+        The One Trap: Dynamic Currency Conversion (DCC)
+      </h2>
+      <p class="text-sm mb-3">
+        Toward the end of your withdrawal, the screen will show you an amount in your home currency (USD, EUR, GBP, AUD) and ask:
+      </p>
+      <div class="bg-background p-4 rounded-lg font-mono text-xs text-primary mb-3 border border-outline-variant/40">
+        "Would you like to be billed in EUR with guaranteed conversion rate? <br/>
+        [Accept With Conversion] &nbsp;&nbsp;&nbsp; [Continue Without Conversion]"
+      </div>
+      <p class="text-sm font-semibold text-primary">
+        Always hit "Without Conversion" (or "Decline Conversion" / "Charge in IDR").
+      </p>
+      <p class="text-xs text-on-surface-variant mt-2 leading-relaxed">
+        If you accept, the local ATM applies its own unfavorable exchange rate, pocketing an extra 6% to 10% on top of the transaction. When you decline, the transaction is processed in Indonesian Rupiah, letting your own bank (or Wise/Revolut) execute the conversion at real market rates.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary font-headline-sm mb-3">How Much Cash Can You Withdraw at Once?</h2>
+      <p class="mb-3">
+        Look at the sticker on the front of the ATM. It will say either <strong>50,000</strong> or <strong>100,000</strong>. That tells you what denomination the machine spits out:
+      </p>
+      <ul class="list-disc pl-5 space-y-2 text-sm">
+        <li><strong>Machines marked 100,000:</strong> Maximum withdrawal is usually 2,500,000 IDR (approx.  USD) or 3,000,000 IDR per transaction (25 or 30 banknotes).</li>
+        <li><strong>Machines marked 50,000:</strong> Maximum withdrawal is typically 1,250,000 IDR to 1,500,000 IDR. Your wallet will be thick with purple bills, but smaller notes are easier to spend at local roadside fruit stalls.</li>
+      </ul>
+      <p class="text-sm mt-3">
+        Need more than 3 million IDR? You don't have to find another machine. Just put your card back in and do a second withdrawal right away. Most cards allow multiple consecutive transactions up to your daily limit.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary font-headline-sm mb-3">Two Critical Habits to Avoid Losing Your Card</h2>
+      <p class="mb-3">
+        Indonesian ATMs operate in the opposite order of machines in Europe and North America:
+      </p>
+      <ol class="list-decimal pl-5 space-y-2 text-sm font-medium">
+        <li>The ATM dispenses your <strong>cash first</strong>.</li>
+        <li>The machine beeps for a few seconds.</li>
+        <li>Only then does it eject your <strong>card</strong>.</li>
+      </ol>
+      <p class="text-sm mt-3">
+        Dozens of travelers grab their bills, turn around, and walk away leaving their card in the slot. After 20 to 30 seconds of inactivity, the ATM will swallow the card for security. <em>Cash in hand, wait for the plastic.</em>
+      </p>
+    </section>
+
+    <!-- Local Location Callout: KUKA & Indomaret BCA -->
+    <section class="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/30 my-8">
+      <div class="flex items-center gap-2 text-xs font-bold text-secondary uppercase tracking-wider mb-2">
+        <span class="material-symbols-outlined text-sm">local_atm</span>
+        Tegallalang Local Tip
+      </div>
+      <h3 class="text-xl md:text-2xl font-bold text-primary font-headline-sm mb-3">
+        Need an ATM While Exploring North of Ubud?
+      </h3>
+      <p class="text-sm mb-4">
+        As you head up Jl. Raya Tegallalang toward the rice terraces, bank branches disappear, but air-conditioned minimarts save the day.
+      </p>
+      <p class="text-sm mb-4">
+        Right across the road from <strong><a href="/" class="text-primary font-bold underline hover:text-primary-container">KUKA Coffee Shop</a></strong>, there is an <strong>Indomaret convenience store with a reliable indoor BCA ATM</strong>. It is safe, clean, camera-monitored, and dispenses crisp 100,000 IDR notes.
+      </p>
+      <p class="text-sm mb-4">
+        Grab your cash at the Indomaret ATM, cross the street into KUKA for an iced flat white or cold brew, and connect to high-speed 5G WiFi while you plan the rest of your day. We accept cash, international credit cards, and QRIS payments.
+      </p>
+      <div class="flex flex-wrap gap-3 pt-2">
+        <a href="/#location" class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-bold text-xs uppercase px-5 py-3 rounded hover:bg-primary-container transition-all">
+          <span>Find KUKA on Map</span>
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+        <a href="/services/coffee-and-bites" class="inline-flex items-center gap-1.5 bg-surface text-primary border border-outline-variant/60 font-bold text-xs uppercase px-5 py-3 rounded hover:bg-surface-container transition-all">
+          <span>Coffee &amp; Bites Menu</span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary font-headline-sm mb-3">Frequently Asked Questions</h2>
+      <div class="space-y-4 text-sm">
+        <div>
+          <h3 class="font-bold text-primary">Do Indonesian ATMs charge withdrawal fees to foreign cards?</h3>
+          <p>No. Major banks (BCA, Mandiri, BNI, BRI) do not charge a local surcharge fee to international cards. Any fee you see on your statement was charged by your home issuing bank, not the Indonesian ATM.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-primary">Should I notify my bank before traveling to Bali?</h3>
+          <p>Yes. If you use a traditional bank (Chase, Barclays, etc.), set a travel notice in their mobile app before boarding your flight. Fintech cards like Wise and Revolut don't require travel notices, but check your in-app security settings to ensure international ATM withdrawals are toggled on.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-primary">What is QRIS and can tourists use it instead of cash?</h3>
+          <p>QRIS is Indonesia's universal QR payment network used by every street vendor and cafe. While cross-border QRIS currently works for visitors from Singapore, Malaysia, and Thailand via their domestic bank apps, travelers from Europe, the US, and Australia still need local IDR cash or a physical Visa/Mastercard for daily transactions.</p>
+        </div>
+      </div>
+    </section>
+
+  </article>
+
+  <!-- CTA Box -->
+  <div class="mt-12 p-8 bg-primary text-white rounded-2xl text-center">
+    <h3 class="text-2xl font-bold mb-2">Visiting Tegallalang?</h3>
+    <p class="text-white/80 max-w-md mx-auto mb-6 text-sm">
+      Stop by KUKA for freshly roasted single-origin Bali coffee, peaceful rice terrace views, and reliable 5G WiFi.
+    </p>
+    <a class="bg-surface text-primary font-bold text-xs uppercase px-6 py-3 rounded shadow hover:bg-surface-container transition-colors inline-block" href="/#location">Get Directions to KUKA</a>
+  </div>
+</GuideLayout>

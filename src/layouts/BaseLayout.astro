@@ -1,0 +1,82 @@
+﻿---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFab from '../components/WhatsAppFab.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  schema?: object | object[];
+  currentPath?: string;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogImage = 'https://kukacoffee.id/assets/images/view-2.webp',
+  ogType = 'website',
+  schema,
+  currentPath = Astro.url.pathname,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>{title}</title>
+  <meta content={description} name="description"/>
+  <link rel="canonical" href={canonical}/>
+
+  <!-- Open Graph / WhatsApp -->
+  <meta property="og:type" content={ogType}/>
+  <meta property="og:url" content={canonical}/>
+  <meta property="og:title" content={title}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:image" content={ogImage}/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:url" content={canonical}/>
+  <meta name="twitter:title" content={title}/>
+  <meta name="twitter:description" content={description}/>
+  <meta name="twitter:image" content={ogImage}/>
+
+  <link rel="icon" type="image/webp" href="/assets/images/logo.webp"/>
+  <link rel="apple-touch-icon" href="/assets/images/logo.webp"/>
+
+  <!-- Preconnect Google Fonts for WPO -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="image" href="/assets/images/view-2-mobile.webp" media="(max-width: 768px)" type="image/webp" fetchpriority="high"/>
+  <link rel="preload" as="image" href="/assets/images/view-2.webp" media="(min-width: 769px)" type="image/webp" fetchpriority="high"/>
+
+  <!-- Async Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Manrope:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet"/></noscript>
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/></noscript>
+
+  <!-- Schema.org JSON-LD -->
+  {schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  )}
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+  <Navbar currentPath={currentPath} />
+  
+  <slot />
+
+  <Footer />
+  <WhatsAppFab />
+
+  <script src="/assets/js/nav.js" defer></script>
+</body>
+</html>
