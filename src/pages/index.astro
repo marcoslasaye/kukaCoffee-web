@@ -518,14 +518,9 @@ const schema = {
         inView('#experience', () => {
           const heroElements = document.querySelectorAll('#experience .hero-elem');
           heroElements.forEach((el, index) => {
-            animate(el, { opacity: [0, 1], y: [24, 0], filter: ['blur(10px)', 'blur(0px)'] }, { duration: 0.9, delay: 0.1 + (index * 0.12), easing: [0.22, 1, 0.36, 1] });
+            animate(el, { opacity: [0, 1], y: [24, 0], filter: ['blur(10px)', 'blur(0px)'] }, { duration: 0.8, delay: 0.05 + (index * 0.08), easing: [0.22, 1, 0.36, 1] });
           });
-          return () => {
-            heroElements.forEach((el) => {
-              animate(el, { opacity: 0, y: 20, filter: 'blur(8px)' }, { duration: 0.2 });
-            });
-          };
-        }, { amount: 0.2 });
+        }, { amount: 0.1 });
       }
     });
   </script>
