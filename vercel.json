@@ -36,12 +36,22 @@
     },
     {
       "source": "/services/specialty-coffee-tasting.html",
-      "destination": "/services/coffee-and-bites",
+      "destination": "/services/coffee-and-menu",
       "permanent": true
     },
     {
       "source": "/services/specialty-coffee-tasting",
-      "destination": "/services/coffee-and-bites",
+      "destination": "/services/coffee-and-menu",
+      "permanent": true
+    },
+    {
+      "source": "/services/coffee-and-bites.html",
+      "destination": "/services/coffee-and-menu",
+      "permanent": true
+    },
+    {
+      "source": "/services/coffee-and-bites",
+      "destination": "/services/coffee-and-menu",
       "permanent": true
     },
     {

@@ -17,7 +17,7 @@ const { currentPath = '' } = Astro.props;
     <!-- Desktop Navigation -->
     <div class="hidden md:flex gap-2 items-center">
       <a class={`text-base font-semibold transition-colors px-4 py-2.5 rounded-lg ${currentPath === '/' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/">Home</a>
-      <a class={`text-base font-semibold transition-colors px-4 py-2.5 rounded-lg ${currentPath === '/services/coffee-and-bites' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/services/coffee-and-bites">Coffee &amp; Menu</a>
+      <a class={`text-base font-semibold transition-colors px-4 py-2.5 rounded-lg ${currentPath === '/services/coffee-and-menu' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/services/coffee-and-menu">Coffee &amp; Menu</a>
       <a class="text-base font-semibold text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-4 py-2.5 rounded-lg" href="/#reviews">Reviews</a>
       <a class="bg-primary text-on-primary text-sm uppercase tracking-wider font-bold px-6 py-3 rounded-lg hover:bg-primary-container transition-all duration-300 shadow-md active:scale-95 ml-3" href="/#location">Location</a>
     </div>
@@ -58,7 +58,7 @@ const { currentPath = '' } = Astro.props;
           <span>Home</span>
           <span class="material-symbols-outlined text-sm">chevron_right</span>
         </a>
-        <a class={`text-lg font-bold px-4 py-3 rounded-xl transition-colors flex items-center justify-between ${currentPath === '/services/coffee-and-bites' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/services/coffee-and-bites">
+        <a class={`text-lg font-bold px-4 py-3 rounded-xl transition-colors flex items-center justify-between ${currentPath === '/services/coffee-and-menu' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/services/coffee-and-menu">
           <span>Coffee &amp; Menu</span>
           <span class="material-symbols-outlined text-sm">chevron_right</span>
         </a>

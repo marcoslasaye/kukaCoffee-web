@@ -6,9 +6,9 @@ const schema = {
   "@graph": [
     {
       "@type": "Menu",
-      "@id": "https://kukacoffee.id/services/coffee-and-bites#menu",
+      "@id": "https://kukacoffee.id/services/coffee-and-menu#menu",
       "name": "KUKA Coffee & Eatery Menu",
-      "url": "https://kukacoffee.id/services/coffee-and-bites#menu",
+      "url": "https://kukacoffee.id/services/coffee-and-menu#menu",
       "description": "Full menu for KUKA Coffee & Eatery in Tegallalang, featuring single-origin espresso, refreshing non-coffee drinks, ceremonial matcha, natural fruit smoothies, and freshly baked croissants.",
       "hasMenuSection": [
         {
@@ -42,7 +42,7 @@ const schema = {
       "@type": "CafeOrCoffeeShop",
       "@id": "https://kukacoffee.id/#cafe",
       "name": "KUKA Coffee Shop",
-      "hasMenu": "https://kukacoffee.id/services/coffee-and-bites#menu",
+      "hasMenu": "https://kukacoffee.id/services/coffee-and-menu#menu",
       "image": "https://kukacoffee.id/assets/images/entrance-1.webp",
       "telephone": "+6285737600907",
       "address": {
@@ -106,8 +106,8 @@ const schema = {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Coffee & Bites",
-          "item": "https://kukacoffee.id/services/coffee-and-bites"
+          "name": "Coffee & Menu",
+          "item": "https://kukacoffee.id/services/coffee-and-menu"
         }
       ]
     }
@@ -116,11 +116,11 @@ const schema = {
 ---
 
 <BaseLayout
-  title="Specialty Coffee & Bakery Menu | KUKA Coffee Tegallalang, Bali"
-  description="100% Bali Arabica single-origin coffee and fresh bakery bites. View our full drinks and food menu in Tegallalang, Bali."
-  canonical="https://kukacoffee.id/services/coffee-and-bites"
+  title="Specialty Coffee & Food Menu | KUKA Coffee Tegallalang, Bali"
+  description="100% Bali Arabica single-origin coffee, tea, and fresh bakery bites. View our full drinks and food menu in Tegallalang, Bali."
+  canonical="https://kukacoffee.id/services/coffee-and-menu"
   schema={schema}
-  currentPath="/services/coffee-and-bites"
+  currentPath="/services/coffee-and-menu"
 >
   <main>
     <!-- Hero Section -->
@@ -135,7 +135,7 @@ const schema = {
         <span>/</span>
         <a href="/#experience" class="hover:text-primary transition-colors">Services</a>
         <span>/</span>
-        <span class="text-primary font-semibold">Coffee &amp; Bites</span>
+        <span class="text-primary font-semibold">Coffee &amp; Menu</span>
       </nav>
 
       <span class="bg-secondary-container text-secondary text-xs uppercase font-bold px-3 py-1 rounded-full tracking-widest inline-block mb-6 md:mb-8">
