@@ -4,8 +4,8 @@
   "description": "KUKA Specialty Coffee Landing Page",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/assets/css/styles.css --minify",
+    "build": "npm run build:css && astro build",
     "preview": "astro preview"
   },
   "devDependencies": {
