@@ -1,4 +1,5 @@
 ---
+import Icon from '../components/Icon.astro';
 import BaseLayout from './BaseLayout.astro';
 
 interface Props {
@@ -34,7 +35,7 @@ const {
     <!-- Breadcrumb -->
     <nav aria-label="Breadcrumb" class="mb-6 flex items-center gap-1.5 text-xs text-on-surface-variant font-medium">
       <a href="/" class="hover:text-primary transition-colors flex items-center gap-1">
-        <span class="material-symbols-outlined text-sm">home</span>
+        <Icon name="home" class="text-sm" />
         <span>Home</span>
       </a>
       <span>/</span>

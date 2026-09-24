@@ -1,4 +1,5 @@
 ---
+import Icon from '../../components/Icon.astro';
 import GuideLayout from '../../layouts/GuideLayout.astro';
 
 const schema = {
@@ -137,7 +138,7 @@ const schema = {
     <!-- The DCC Trap Warning -->
     <section class="bg-surface-container p-6 rounded-2xl border-2 border-primary/20">
       <h2 class="text-xl font-bold text-primary font-headline-sm mb-2 flex items-center gap-2">
-        <span class="material-symbols-outlined text-amber-600">warning</span>
+        <Icon name="warning" class="text-amber-600" />
         The One Trap: Dynamic Currency Conversion (DCC)
       </h2>
       <p class="text-sm mb-3">
@@ -187,7 +188,7 @@ const schema = {
     <!-- Local Location Callout: KUKA & Indomaret BCA -->
     <section class="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/30 my-8">
       <div class="flex items-center gap-2 text-xs font-bold text-secondary uppercase tracking-wider mb-2">
-        <span class="material-symbols-outlined text-sm">local_atm</span>
+        <Icon name="local_atm" class="text-sm" />
         Tegallalang Local Tip
       </div>
       <h3 class="text-xl md:text-2xl font-bold text-primary font-headline-sm mb-3">
@@ -205,7 +206,7 @@ const schema = {
       <div class="flex flex-wrap gap-3 pt-2">
         <a href="/#location" class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-bold text-xs uppercase px-5 py-3 rounded hover:bg-primary-container transition-all">
           <span>Find KUKA on Map</span>
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          <Icon name="arrow_forward" class="text-sm" />
         </a>
         <a href="/services/coffee-and-menu" class="inline-flex items-center gap-1.5 bg-surface text-primary border border-outline-variant/60 font-bold text-xs uppercase px-5 py-3 rounded hover:bg-surface-container transition-all">
           <span>Coffee &amp; Menu</span>

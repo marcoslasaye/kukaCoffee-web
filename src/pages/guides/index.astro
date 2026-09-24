@@ -1,4 +1,5 @@
 ---
+import Icon from '../../components/Icon.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const guides = [
@@ -62,7 +63,7 @@ const schema = {
     <!-- Breadcrumb -->
     <nav aria-label="Breadcrumb" class="mb-8 flex items-center gap-1.5 text-xs text-on-surface-variant font-medium">
       <a href="/" class="hover:text-primary transition-colors flex items-center gap-1">
-        <span class="material-symbols-outlined text-sm">home</span>
+        <Icon name="home" class="text-sm" />
         <span>Home</span>
       </a>
       <span>/</span>
@@ -121,7 +122,7 @@ const schema = {
               class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary group-hover:translate-x-1 transition-transform"
             >
               <span>Read Full Guide</span>
-              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <Icon name="arrow_forward" class="text-sm" />
             </a>
           </div>
         </article>
