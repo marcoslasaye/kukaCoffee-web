@@ -50,7 +50,7 @@
       }
 
       // 4. Menu & Bakery Interest
-      if (href.includes('/services/coffee-and-menu')) {
+      if (href.includes('/coffee-and-menu')) {
         window.gtag('event', 'view_menu_click', {
           event_category: 'engagement',
           event_label: text || 'View Menu',
@@ -60,7 +60,7 @@
       }
 
       // 5. Group Bookings / Nomad Workspaces
-      if (href.includes('/services/small-group-bookings')) {
+      if (href.includes('/small-group-bookings')) {
         window.gtag('event', 'click_group_booking', {
           event_category: 'conversion',
           event_label: text || 'Group Booking',

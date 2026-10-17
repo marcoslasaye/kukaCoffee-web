@@ -18,7 +18,7 @@ const { currentPath = '' } = Astro.props;
     <!-- Desktop Navigation -->
     <div class="hidden md:flex gap-2 items-center">
       <a class={`text-base font-semibold transition-colors px-4 py-2.5 rounded-lg ${currentPath === '/' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/">Home</a>
-      <a class={`text-base font-semibold transition-colors px-4 py-2.5 rounded-lg ${currentPath === '/services/coffee-and-menu' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/services/coffee-and-menu">Coffee &amp; Menu</a>
+      <a class={`text-base font-semibold transition-colors px-4 py-2.5 rounded-lg ${currentPath === '/coffee-and-menu' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/coffee-and-menu">Coffee &amp; Menu</a>
       <a class="text-base font-semibold text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-4 py-2.5 rounded-lg" href="/#reviews">Reviews</a>
       <a class="bg-primary text-on-primary text-sm uppercase tracking-wider font-bold px-6 py-3 rounded-lg hover:bg-primary-container transition-all duration-300 shadow-md active:scale-95 ml-3" href="/#location">Location</a>
     </div>
@@ -59,11 +59,11 @@ const { currentPath = '' } = Astro.props;
           <span>Home</span>
           <Icon name="chevron_right" class="text-sm" />
         </a>
-        <a class={`text-lg font-bold px-4 py-3 rounded-xl transition-colors flex items-center justify-between ${currentPath === '/services/coffee-and-menu' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/services/coffee-and-menu">
+        <a class={`text-lg font-bold px-4 py-3 rounded-xl transition-colors flex items-center justify-between ${currentPath === '/coffee-and-menu' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/coffee-and-menu">
           <span>Coffee &amp; Menu</span>
           <Icon name="chevron_right" class="text-sm" />
         </a>
-        <a class={`text-lg font-bold px-4 py-3 rounded-xl transition-colors flex items-center justify-between ${currentPath === '/services/small-group-bookings' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/services/small-group-bookings">
+        <a class={`text-lg font-bold px-4 py-3 rounded-xl transition-colors flex items-center justify-between ${currentPath === '/small-group-bookings' ? 'text-primary bg-surface-container' : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'}`} href="/small-group-bookings">
           <span>Group Bookings</span>
           <Icon name="chevron_right" class="text-sm" />
         </a>

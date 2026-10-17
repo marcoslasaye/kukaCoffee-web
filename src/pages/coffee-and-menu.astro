@@ -1,15 +1,15 @@
 ---
-import Icon from '../../components/Icon.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Menu",
-      "@id": "https://kukacoffee.id/services/coffee-and-menu#menu",
+      "@id": "https://kukacoffee.id/coffee-and-menu#menu",
       "name": "KUKA Coffee & Eatery Menu",
-      "url": "https://kukacoffee.id/services/coffee-and-menu#menu",
+      "url": "https://kukacoffee.id/coffee-and-menu#menu",
       "description": "Full menu for KUKA Coffee & Eatery in Tegallalang, featuring single-origin espresso, refreshing non-coffee drinks, ceremonial matcha, natural fruit smoothies, and freshly baked croissants.",
       "hasMenuSection": [
         {
@@ -43,7 +43,7 @@ const schema = {
       "@type": "CafeOrCoffeeShop",
       "@id": "https://kukacoffee.id/#cafe",
       "name": "KUKA Coffee Shop",
-      "hasMenu": "https://kukacoffee.id/services/coffee-and-menu#menu",
+      "hasMenu": "https://kukacoffee.id/coffee-and-menu#menu",
       "image": "https://kukacoffee.id/assets/images/entrance-1.webp",
       "telephone": "+6285737600907",
       "address": {
@@ -102,7 +102,7 @@ const schema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Coffee & Menu",
-          "item": "https://kukacoffee.id/services/coffee-and-menu"
+          "item": "https://kukacoffee.id/coffee-and-menu"
         }
       ]
     }
@@ -113,9 +113,9 @@ const schema = {
 <BaseLayout
   title="Specialty Coffee & Food Menu | KUKA Coffee Tegallalang"
   description="100% Bali Arabica single-origin coffee, tea, and fresh bakery bites. View our full drinks and food menu in Tegallalang, Bali."
-  canonical="https://kukacoffee.id/services/coffee-and-menu"
+  canonical="https://kukacoffee.id/coffee-and-menu"
   schema={schema}
-  currentPath="/services/coffee-and-menu"
+  currentPath="/coffee-and-menu"
 >
   <main>
     <!-- Unified Hero Section -->
@@ -632,7 +632,7 @@ const schema = {
           <span class="font-bold text-primary block">Easy Main Road Access &amp; Parking →</span>
           <span class="text-xs text-on-surface-variant">Right on Jl. Raya Tegallalang with nearby ATM &amp; Indomaret.</span>
         </a>
-        <a href="/services/small-group-bookings" class="p-4 bg-surface rounded-lg border border-outline-variant/30 hover:border-primary transition-colors block">
+        <a href="/small-group-bookings" class="p-4 bg-surface rounded-lg border border-outline-variant/30 hover:border-primary transition-colors block">
           <span class="font-bold text-primary block">Small Group Bookings (10-20 Pax) →</span>
           <span class="text-xs text-on-surface-variant">Table reservations for team syncs, creative meetups, and small workshops.</span>
         </a>

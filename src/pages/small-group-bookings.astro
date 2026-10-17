@@ -1,13 +1,13 @@
 ---
-import Icon from '../../components/Icon.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://kukacoffee.id/services/small-group-bookings#service",
+      "@id": "https://kukacoffee.id/small-group-bookings#service",
       "name": "Small Group Bookings & Coffee Shop Reservations",
       "serviceType": "Coffee Shop Space Reservation",
       "provider": {
@@ -55,7 +55,7 @@ const schema = {
           "@type": "ListItem",
           "position": 2,
           "name": "Small Group Bookings",
-          "item": "https://kukacoffee.id/services/small-group-bookings"
+          "item": "https://kukacoffee.id/small-group-bookings"
         }
       ]
     }
@@ -66,9 +66,9 @@ const schema = {
 <BaseLayout
   title="Small Group Bookings & Work Tables | KUKA Coffee Bali"
   description="Reserve comfortable seating and work tables for groups of 10-20 people with high-speed WiFi and power outlets in Tegallalang, Bali."
-  canonical="https://kukacoffee.id/services/small-group-bookings"
+  canonical="https://kukacoffee.id/small-group-bookings"
   schema={schema}
-  currentPath="/services/small-group-bookings"
+  currentPath="/small-group-bookings"
 >
   <main>
     <!-- Hero Section -->
@@ -163,7 +163,7 @@ const schema = {
     <div class="max-w-6xl mx-auto">
       <h3 class="text-lg font-bold text-primary font-headline-sm mb-4">Explore More at KUKA:</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <a href="/services/coffee-and-menu" class="p-4 bg-surface rounded-lg border border-outline-variant/30 hover:border-primary transition-colors block">
+        <a href="/coffee-and-menu" class="p-4 bg-surface rounded-lg border border-outline-variant/30 hover:border-primary transition-colors block">
           <span class="font-bold text-primary block">Coffee &amp; Menu →</span>
           <span class="text-xs text-on-surface-variant">Single-origin Munduk &amp; Kintamani Arabica extractions and bakery.</span>
         </a>
