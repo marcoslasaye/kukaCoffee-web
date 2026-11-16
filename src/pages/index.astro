@@ -436,171 +436,166 @@ const schema = {
       </div>
     </div>
 
-    <!-- Controls (Desktop arrows & mobile swipe hint) -->
-    <div class="flex items-center justify-between mb-3">
-      <span class="text-xs text-on-surface-variant font-medium flex items-center gap-1">
-        <Icon name="swipe" class="text-sm md:hidden text-secondary" />
-        <span class="md:hidden">Swipe to see more verified reviews</span>
-        <span class="hidden md:inline">Verified Google Reviews</span>
-      </span>
-      <div class="hidden md:flex items-center gap-2">
-        <button 
-          id="reviews-prev-btn" 
-          type="button" 
-          aria-label="Previous review" 
-          class="w-9 h-9 rounded-full bg-surface border border-outline-variant/40 hover:bg-surface-container flex items-center justify-center text-primary shadow-xs transition-all active:scale-95"
-        >
-          <Icon name="chevron_left" class="text-lg" />
-        </button>
-        <button 
-          id="reviews-next-btn" 
-          type="button" 
-          aria-label="Next review" 
-          class="w-9 h-9 rounded-full bg-surface border border-outline-variant/40 hover:bg-surface-container flex items-center justify-center text-primary shadow-xs transition-all active:scale-95"
-        >
-          <Icon name="chevron_right" class="text-lg" />
-        </button>
-      </div>
-    </div>
+    <!-- Apple-style Testimonial Slider Card -->
+    <div class="relative bg-surface-bright rounded-3xl p-6 sm:p-8 md:p-12 border border-outline-variant/40 shadow-[0_4px_30px_rgba(74,44,42,0.04)] max-w-3xl mx-auto overflow-hidden">
+      <!-- Background Quote Watermark -->
+      <span class="absolute top-2 left-6 text-7xl md:text-8xl text-secondary/10 font-serif select-none pointer-events-none leading-none">“</span>
 
-    <!-- Review Carousel Container (CSS Scroll-Snap) -->
-    <div 
-      id="reviews-track"
-      class="flex gap-4 md:gap-5 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory scroll-smooth no-scrollbar -mx-4 px-4 md:mx-0 md:px-0"
-    >
-      
-      <!-- Card: Auraltecture (New) -->
-      <article class="min-w-[85%] sm:min-w-[360px] md:min-w-[380px] lg:min-w-[390px] snap-start bg-surface-bright p-5 rounded-2xl border border-secondary/30 shadow-[0_4px_20px_rgba(74,44,42,0.04)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all shrink-0">
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-secondary/15 text-secondary font-bold text-sm flex items-center justify-center border border-secondary/25">
-                A
-              </div>
-              <div>
-                <h3 class="font-label-lg text-sm font-bold text-primary">Auraltecture</h3>
-                <span class="text-[11px] text-on-surface-variant/80">Local Guide • 32 reviews</span>
-              </div>
-            </div>
-            <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
-          </div>
-          <span class="inline-block text-[10px] uppercase tracking-wider font-extrabold bg-secondary-container text-secondary px-2 py-0.5 rounded-full mb-2">No Gimmicks • Pure Coffee</span>
-          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3">
+      <div class="relative z-10">
+        <!-- Review text container with fixed min-height to prevent layout jumps -->
+        <div id="testimonial-container" class="min-h-[170px] sm:min-h-[150px] md:min-h-[135px] flex flex-col justify-center transition-all duration-300">
+          <p id="testimonial-quote" class="font-headline-sm text-sm sm:text-base md:text-lg text-primary leading-relaxed italic text-center max-w-2xl mx-auto">
             “Sublime! I arrived mid-afternoon on a Sunday and had the place to myself. The positioning of the main seating area lets a pleasant breeze waft through and along with outstanding iced americano and the warm almond croissant, this was bliss. No gimmicks with the coffee in an area full of tourist-centric gimmicks. So, actually… stay away and don’t over-crowd this amazing little cafe!”
           </p>
-        </div>
-        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
-          <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-secondary">Almond Croissant &amp; Americano</span>
-          <a href="https://maps.app.goo.gl/bTXu4n2Jy6TDUX776" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
-            Google Review <Icon name="open_in_new" class="text-[12px]" />
-          </a>
-        </div>
-      </article>
-
-      <!-- Card: Sophie -->
-      <article class="min-w-[85%] sm:min-w-[360px] md:min-w-[380px] lg:min-w-[390px] snap-start bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all shrink-0">
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-secondary/10 text-secondary font-bold text-sm flex items-center justify-center border border-secondary/20">
-                S
-              </div>
-              <div>
-                <h3 class="font-label-lg text-sm font-bold text-primary">Sophie</h3>
-                <span class="text-[11px] text-on-surface-variant/80">6 reviews • Traveler</span>
-              </div>
-            </div>
-            <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
+          
+          <div class="mt-5 text-center">
+            <span class="text-xs font-bold text-[#FBBC04] tracking-widest inline-block mb-1.5">★★★★★</span>
+            <h4 id="testimonial-author" class="font-label-lg text-sm md:text-base font-bold text-primary">Auraltecture</h4>
+            <span id="testimonial-tag" class="text-[11px] md:text-xs text-secondary font-semibold block mb-0.5">Local Guide • 32 reviews • Almond Croissant &amp; Americano</span>
+            <a id="testimonial-link" href="https://maps.app.goo.gl/bTXu4n2Jy6TDUX776" target="_blank" rel="noopener noreferrer" class="text-[11px] text-on-surface-variant/70 hover:text-primary inline-flex items-center gap-1 transition-colors">
+              <span>Verified Google Review</span>
+              <Icon name="open_in_new" class="text-[11px]" />
+            </a>
           </div>
-          <span class="inline-block text-[11px] uppercase tracking-wider font-bold text-secondary mb-1">Hidden Gem</span>
-          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3">
-            “Lovely place with views over garden and rice fields, koi-pond (you can feed them) and the best coffee and warm croissants in town! LOVE it! Beautiful atmosphere and lovely owner.”
-          </p>
         </div>
-        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
-          <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-secondary">Best Coffee &amp; Croissants</span>
-          <a href="https://www.google.com/maps/contrib/101600870751385328140/reviews?hl=es" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
-            Verified Review <Icon name="open_in_new" class="text-[12px]" />
-          </a>
-        </div>
-      </article>
 
-      <!-- Card: Kiko Setyawan -->
-      <article class="min-w-[85%] sm:min-w-[360px] md:min-w-[380px] lg:min-w-[390px] snap-start bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all shrink-0">
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center border border-primary/20">
-                K
-              </div>
-              <div>
-                <h3 class="font-label-lg text-sm font-bold text-primary">Kiko Setyawan</h3>
-                <span class="text-[11px] text-on-surface-variant/80">Local Guide • Bali Visitor</span>
-              </div>
-            </div>
-            <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
+        <!-- Controls: Dots & Navigation Arrows -->
+        <div class="flex items-center justify-center gap-4 mt-6 pt-4 border-t border-outline-variant/20">
+          <button 
+            id="testimonial-prev" 
+            type="button" 
+            aria-label="Previous review"
+            class="w-8 h-8 rounded-full bg-surface border border-outline-variant/40 hover:bg-surface-container flex items-center justify-center text-primary transition-all active:scale-95"
+          >
+            <Icon name="chevron_left" class="text-base" />
+          </button>
+
+          <div id="testimonial-dots" class="flex items-center gap-2">
+            <!-- Rendered by JS -->
           </div>
-          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-2.5">
-            “Tempatnya nyaman, adem dan bersih. Kopinya enak dan pelayanannya juga ramah, next time akan mampir lagi jika liburan ke Bali.”
-          </p>
-          <p class="font-body-md text-[11px] text-on-surface-variant italic border-l-2 border-primary/30 pl-2.5 mb-3">
-            “Comfortable, breezy, and clean. Delicious coffee and friendly service — will definitely visit again on my next trip to Bali.”
-          </p>
-        </div>
-        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
-          <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-primary">Food 5 • Service 5 • Vibe 5</span>
-          <a href="https://www.google.com/maps/contrib/112133252968755205562/reviews?hl=es" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
-            Verified Review <Icon name="open_in_new" class="text-[12px]" />
-          </a>
-        </div>
-      </article>
 
-      <!-- Card: Nikita M. -->
-      <article class="min-w-[85%] sm:min-w-[360px] md:min-w-[380px] lg:min-w-[390px] snap-start bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all shrink-0">
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-primary-container/20 text-primary font-bold text-sm flex items-center justify-center border border-primary/20">
-                N
-              </div>
-              <div>
-                <h3 class="font-label-lg text-sm font-bold text-primary">Никита М.</h3>
-                <span class="text-[11px] text-on-surface-variant/80">Verified Guest • Remote Nomad</span>
-              </div>
-            </div>
-            <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
-          </div>
-          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-2.5">
-            “Очень классное место, нам очень понравилось. Здесь красиво, уютно и делают очень вкусный кофе. Всё выглядит профессионально и с душой...”
-          </p>
-          <p class="font-body-md text-[11px] text-on-surface-variant italic border-l-2 border-primary/30 pl-2.5 mb-3">
-            “Awesome place! Beautiful, cozy, and they make delicious coffee with soul. Special thanks for the warm welcome!”
-          </p>
+          <button 
+            id="testimonial-next" 
+            type="button" 
+            aria-label="Next review"
+            class="w-8 h-8 rounded-full bg-surface border border-outline-variant/40 hover:bg-surface-container flex items-center justify-center text-primary transition-all active:scale-95"
+          >
+            <Icon name="chevron_right" class="text-base" />
+          </button>
         </div>
-        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
-          <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-primary">Quiet Vibe • No Wait</span>
-          <a href="https://www.google.com/maps/contrib/100387763419723096193/reviews?hl=es" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
-            Verified Review <Icon name="open_in_new" class="text-[12px]" />
-          </a>
-        </div>
-      </article>
-
+      </div>
     </div>
 
     <script is:inline>
       document.addEventListener('DOMContentLoaded', () => {
-        const track = document.getElementById('reviews-track');
-        const prevBtn = document.getElementById('reviews-prev-btn');
-        const nextBtn = document.getElementById('reviews-next-btn');
+        const reviews = [
+          {
+            quote: "“Sublime! I arrived mid-afternoon on a Sunday and had the place to myself. The positioning of the main seating area lets a pleasant breeze waft through and along with outstanding iced americano and the warm almond croissant, this was bliss. No gimmicks with the coffee in an area full of tourist-centric gimmicks. So, actually… stay away and don’t over-crowd this amazing little cafe!”",
+            author: "Auraltecture",
+            tag: "Local Guide • 32 reviews • Almond Croissant & Americano",
+            link: "https://maps.app.goo.gl/bTXu4n2Jy6TDUX776"
+          },
+          {
+            quote: "“Lovely place with views over garden and rice fields, koi-pond (you can feed them) and the best coffee and warm croissants in town! LOVE it! Beautiful atmosphere and lovely owner.”",
+            author: "Sophie",
+            tag: "Verified Traveler • 6 reviews • Best Coffee & Croissants",
+            link: "https://www.google.com/maps/contrib/101600870751385328140/reviews?hl=es"
+          },
+          {
+            quote: "“Tempatnya nyaman, adem dan bersih. Kopinya enak dan pelayanannya juga ramah, next time akan mampir lagi jika liburan ke Bali. (Comfortable, breezy, and clean. Delicious coffee and friendly service!)”",
+            author: "Kiko Setyawan",
+            tag: "Local Guide • Bali Visitor • Food 5 · Service 5 · Vibe 5",
+            link: "https://www.google.com/maps/contrib/112133252968755205562/reviews?hl=es"
+          },
+          {
+            quote: "“Awesome place, we really enjoyed it! Beautiful, cozy, and they make delicious coffee with soul. Everything looks professional and heartfelt. Special thanks for the warm welcome!”",
+            author: "Никита М.",
+            tag: "Remote Nomad • Verified Guest • Quiet Vibe",
+            link: "https://www.google.com/maps/contrib/100387763419723096193/reviews?hl=es"
+          }
+        ];
 
-        if (track && prevBtn && nextBtn) {
-          prevBtn.addEventListener('click', () => {
-            track.scrollBy({ left: -390, behavior: 'smooth' });
+        let currentIndex = 0;
+        let timer = null;
+
+        const quoteEl = document.getElementById('testimonial-quote');
+        const authorEl = document.getElementById('testimonial-author');
+        const tagEl = document.getElementById('testimonial-tag');
+        const linkEl = document.getElementById('testimonial-link');
+        const dotsContainer = document.getElementById('testimonial-dots');
+        const prevBtn = document.getElementById('testimonial-prev');
+        const nextBtn = document.getElementById('testimonial-next');
+        const container = document.getElementById('testimonial-container');
+
+        if (!quoteEl || !dotsContainer) return;
+
+        // Create dots
+        dotsContainer.innerHTML = '';
+        reviews.forEach((_, idx) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.setAttribute('aria-label', 'Go to review ' + (idx + 1));
+          dot.className = idx === 0 
+            ? 'w-6 h-2 rounded-full bg-primary transition-all duration-300' 
+            : 'w-2 h-2 rounded-full bg-outline-variant/60 hover:bg-primary/50 transition-all duration-300';
+          dot.addEventListener('click', () => {
+            showReview(idx);
+            resetAutoplay();
           });
-          nextBtn.addEventListener('click', () => {
-            track.scrollBy({ left: 390, behavior: 'smooth' });
+          dotsContainer.appendChild(dot);
+        });
+
+        function showReview(index) {
+          currentIndex = (index + reviews.length) % reviews.length;
+          
+          if (container) {
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(4px)';
+          }
+
+          setTimeout(() => {
+            const r = reviews[currentIndex];
+            quoteEl.textContent = r.quote;
+            authorEl.textContent = r.author;
+            tagEl.textContent = r.tag;
+            linkEl.href = r.link;
+
+            const dots = dotsContainer.querySelectorAll('button');
+            dots.forEach((dot, idx) => {
+              dot.className = idx === currentIndex 
+                ? 'w-6 h-2 rounded-full bg-primary transition-all duration-300' 
+                : 'w-2 h-2 rounded-full bg-outline-variant/60 hover:bg-primary/50 transition-all duration-300';
+            });
+
+            if (container) {
+              container.style.opacity = '1';
+              container.style.transform = 'translateY(0)';
+            }
+          }, 150);
+        }
+
+        function resetAutoplay() {
+          if (timer) clearInterval(timer);
+          timer = setInterval(() => {
+            showReview(currentIndex + 1);
+          }, 8000);
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            showReview(currentIndex - 1);
+            resetAutoplay();
           });
         }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            showReview(currentIndex + 1);
+            resetAutoplay();
+          });
+        }
+
+        resetAutoplay();
       });
     </script>
   </div>
