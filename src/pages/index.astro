@@ -436,11 +436,97 @@ const schema = {
       </div>
     </div>
 
-    <!-- Review Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+    <!-- Controls (Desktop arrows & mobile swipe hint) -->
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-xs text-on-surface-variant font-medium flex items-center gap-1">
+        <Icon name="swipe" class="text-sm md:hidden text-secondary" />
+        <span class="md:hidden">Swipe to see more verified reviews</span>
+        <span class="hidden md:inline">Verified Google Reviews</span>
+      </span>
+      <div class="hidden md:flex items-center gap-2">
+        <button 
+          id="reviews-prev-btn" 
+          type="button" 
+          aria-label="Previous review" 
+          class="w-9 h-9 rounded-full bg-surface border border-outline-variant/40 hover:bg-surface-container flex items-center justify-center text-primary shadow-xs transition-all active:scale-95"
+        >
+          <Icon name="chevron_left" class="text-lg" />
+        </button>
+        <button 
+          id="reviews-next-btn" 
+          type="button" 
+          aria-label="Next review" 
+          class="w-9 h-9 rounded-full bg-surface border border-outline-variant/40 hover:bg-surface-container flex items-center justify-center text-primary shadow-xs transition-all active:scale-95"
+        >
+          <Icon name="chevron_right" class="text-lg" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Review Carousel Container (CSS Scroll-Snap) -->
+    <div 
+      id="reviews-track"
+      class="flex gap-4 md:gap-5 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory scroll-smooth no-scrollbar -mx-4 px-4 md:mx-0 md:px-0"
+    >
       
-      <!-- Card 1: Kiko Setyawan -->
-      <article class="bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all">
+      <!-- Card: Auraltecture (New) -->
+      <article class="min-w-[85%] sm:min-w-[360px] md:min-w-[380px] lg:min-w-[390px] snap-start bg-surface-bright p-5 rounded-2xl border border-secondary/30 shadow-[0_4px_20px_rgba(74,44,42,0.04)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all shrink-0">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-full bg-secondary/15 text-secondary font-bold text-sm flex items-center justify-center border border-secondary/25">
+                A
+              </div>
+              <div>
+                <h3 class="font-label-lg text-sm font-bold text-primary">Auraltecture</h3>
+                <span class="text-[11px] text-on-surface-variant/80">Local Guide • 32 reviews</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
+          </div>
+          <span class="inline-block text-[10px] uppercase tracking-wider font-extrabold bg-secondary-container text-secondary px-2 py-0.5 rounded-full mb-2">No Gimmicks • Pure Coffee</span>
+          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3">
+            “Sublime! I arrived mid-afternoon on a Sunday and had the place to myself. The positioning of the main seating area lets a pleasant breeze waft through and along with outstanding iced americano and the warm almond croissant, this was bliss. No gimmicks with the coffee in an area full of tourist-centric gimmicks. So, actually… stay away and don’t over-crowd this amazing little cafe!”
+          </p>
+        </div>
+        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
+          <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-secondary">Almond Croissant &amp; Americano</span>
+          <a href="https://maps.app.goo.gl/bTXu4n2Jy6TDUX776" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
+            Google Review <Icon name="open_in_new" class="text-[12px]" />
+          </a>
+        </div>
+      </article>
+
+      <!-- Card: Sophie -->
+      <article class="min-w-[85%] sm:min-w-[360px] md:min-w-[380px] lg:min-w-[390px] snap-start bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all shrink-0">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-full bg-secondary/10 text-secondary font-bold text-sm flex items-center justify-center border border-secondary/20">
+                S
+              </div>
+              <div>
+                <h3 class="font-label-lg text-sm font-bold text-primary">Sophie</h3>
+                <span class="text-[11px] text-on-surface-variant/80">6 reviews • Traveler</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
+          </div>
+          <span class="inline-block text-[11px] uppercase tracking-wider font-bold text-secondary mb-1">Hidden Gem</span>
+          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3">
+            “Lovely place with views over garden and rice fields, koi-pond (you can feed them) and the best coffee and warm croissants in town! LOVE it! Beautiful atmosphere and lovely owner.”
+          </p>
+        </div>
+        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
+          <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-secondary">Best Coffee &amp; Croissants</span>
+          <a href="https://www.google.com/maps/contrib/101600870751385328140/reviews?hl=es" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
+            Verified Review <Icon name="open_in_new" class="text-[12px]" />
+          </a>
+        </div>
+      </article>
+
+      <!-- Card: Kiko Setyawan -->
+      <article class="min-w-[85%] sm:min-w-[360px] md:min-w-[380px] lg:min-w-[390px] snap-start bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all shrink-0">
         <div>
           <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-2.5">
@@ -469,36 +555,8 @@ const schema = {
         </div>
       </article>
 
-      <!-- Card 2: Sophie -->
-      <article class="bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all">
-        <div>
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-secondary/10 text-secondary font-bold text-sm flex items-center justify-center border border-secondary/20">
-                S
-              </div>
-              <div>
-                <h3 class="font-label-lg text-sm font-bold text-primary">Sophie</h3>
-                <span class="text-[11px] text-on-surface-variant/80">6 reviews • Traveler</span>
-              </div>
-            </div>
-            <span class="text-xs font-bold text-[#FBBC04] tracking-wider">★★★★★</span>
-          </div>
-          <span class="inline-block text-[11px] uppercase tracking-wider font-bold text-secondary mb-1">Hidden Gem</span>
-          <p class="font-body-md text-xs md:text-sm text-on-surface leading-relaxed mb-3">
-            “Lovely place with views over garden and rice fields, koi-pond (you can feed them) and the best coffee and warm croissants in town! LOVE it! Beautiful atmosphere and lovely owner.”
-          </p>
-        </div>
-        <div class="pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-[11px] text-on-surface-variant/80">
-          <span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-semibold text-secondary">Best Coffee &amp; Croissants</span>
-          <a href="https://www.google.com/maps/contrib/101600870751385328140/reviews?hl=es" target="_blank" rel="noopener noreferrer" class="hover:text-primary inline-flex items-center gap-0.5">
-            Verified Review <Icon name="open_in_new" class="text-[12px]" />
-          </a>
-        </div>
-      </article>
-
-      <!-- Card 3: Nikita M. -->
-      <article class="bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all">
+      <!-- Card: Nikita M. -->
+      <article class="min-w-[85%] sm:min-w-[360px] md:min-w-[380px] lg:min-w-[390px] snap-start bg-surface-bright p-5 rounded-2xl border border-outline-variant/40 shadow-[0_4px_20px_rgba(74,44,42,0.03)] flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(74,44,42,0.08)] transition-all shrink-0">
         <div>
           <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-2.5">
@@ -528,6 +586,23 @@ const schema = {
       </article>
 
     </div>
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const track = document.getElementById('reviews-track');
+        const prevBtn = document.getElementById('reviews-prev-btn');
+        const nextBtn = document.getElementById('reviews-next-btn');
+
+        if (track && prevBtn && nextBtn) {
+          prevBtn.addEventListener('click', () => {
+            track.scrollBy({ left: -390, behavior: 'smooth' });
+          });
+          nextBtn.addEventListener('click', () => {
+            track.scrollBy({ left: 390, behavior: 'smooth' });
+          });
+        }
+      });
+    </script>
   </div>
 </section>
 <!-- Frequently Asked Questions (Semantic FAQ Accordion) -->
