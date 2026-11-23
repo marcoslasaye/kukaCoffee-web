@@ -1,4 +1,5 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
+Sitemap: https://kukacoffee.id/sitemap-index.xml
 Sitemap: https://kukacoffee.id/sitemap.xml
